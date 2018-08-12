@@ -56,21 +56,6 @@
             </v-btn>
           </v-list-tile-avatar>
         </v-list>
-        <!--
-          <template v-for="(item, index) in items2">
-          <v-list-tile v-if="item.action" :key="item.title"  @click="true">
-          <v-list-tile-action>
-          <v-icon>{{ item.action }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content class="white--text">
-          <v-list-tile-title>{{ item.title }}
-          </v-list-tile-title>
-          </v-list-tile-content>
-          </v-list-tile>
-          <v-divider v-else-if="item.divider" :key="index"></v-divider>
-          <v-subheader v-else-if="item.header" :key="item.header" class="grey--text text--lighten-4">{{ item.header }}</v-subheader>
-          </template>
-        -->
       </v-navigation-drawer>
       <v-toolbar icon dense app :clipped-left="clipped" tabs>
         Clique:
@@ -82,7 +67,10 @@
         <v-spacer></v-spacer>
         <v-dialog v-model="dialog" persistent max-width="500px">
           <v-btn slot="activator" icon>
-            <v-icon>edit</v-icon>
+            <v-badge color="green" left overlap>
+              <v-icon slot="badge" dark small >message</v-icon>
+              <v-icon>edit</v-icon>
+            </v-badge>
           </v-btn>
           <v-card>
             <v-card-title>
@@ -94,14 +82,14 @@
                   <v-flex xs12 sm6 md4>
                     <v-text-field v-model="nome" box label="Nome:" hint="Digite seu nome e sobrenome." persistent-hint required></v-text-field>
                   </v-flex>
-                  <v-flex xs12 sm6 md4>
-                    <v-text-field v-model="numero" box label="WhatsApp:" hint="Exemplo: 11 9.8765-4321" persistent-hint required></v-text-field>
-                  </v-flex>
                   <v-flex xs12>
                     <v-text-field v-model="titulo" box label="Título:" hint="Exemplo: Declaração de Amor ao Henrique xD" required></v-text-field>
                   </v-flex>
                   <v-flex xs12>
                     <v-textarea v-model="mensagem" label="Digite sua Mensagem:" auto-grow box  hint="Escreva algo legal! :D"></v-textarea>
+                  </v-flex>
+                  <v-flex xs12 sm6 md4>
+                    <v-text-field v-model="numero" box label="WhatsApp(Caso queira retorno):" hint="Exemplo: 11 9.8765-4321" persistent-hint required></v-text-field>
                   </v-flex>
                 </v-layout>
               </v-container>
@@ -114,65 +102,49 @@
             </v-card-actions>
           </v-card>
         </v-dialog>
-      <v-tabs slot="extension" v-model="tabs" fixed-tabs color="transparent">
-        <v-tabs-slider></v-tabs-slider>
-        <v-tab to="/" class="primary--text">
-          <v-icon>phone</v-icon>
-        </v-tab>
-        <v-tab to="/About" class="primary--text">
-          <v-icon>favorite</v-icon>
-        </v-tab>
-        <v-tab to="/Contact" class="primary--text">
-          <v-icon>account_box</v-icon>
-        </v-tab>
-      </v-tabs>
-    </v-toolbar>
-
+        <v-tabs slot="extension" v-model="tabs" fixed-tabs color="transparent">
+          <v-tabs-slider></v-tabs-slider>
+          <v-tab to="/" class="primary--text">
+            <v-icon>home</v-icon>
+          </v-tab>
+          <v-tab to="/About" class="primary--text">
+            <v-icon>account_box</v-icon>
+          </v-tab>
+          <v-tab to="/Contact" class="primary--text">
+            <v-icon>messages</v-icon>
+          </v-tab>
+        </v-tabs>
+      </v-toolbar>
       <v-content>
         <router-view>
         </router-view>
       </v-content>
-    <v-footer dark height="auto">
-      <v-card class="flex" flat tile>
-        <v-flex dark text-xs-center white--text xs12>
-            <strong class="subheading">Confira minhas redes sociais!</strong>
-          <v-spacer/>
+      <v-footer dark height="auto">
+        <v-card class="flex" flat tile>
           <v-flex dark text-xs-center white--text xs12>
-            <v-btn small icon target="_blank" href="https://www.facebook.com/hpbonfim/">
-              <img src="https://png.icons8.com/material/50/000000/facebook.png" alt="Facebook" >
-            </v-btn>
-            <v-btn small icon target="_blank" href="https://www.instagram.com/hpbonfim/">
-              <img src="https://png.icons8.com/material/50/000000/instagram.png" alt="Instagram" >
-            </v-btn>
-            <v-btn small icon target="_blank" href="https://www.linkedin.com/in/hpbonfim/">
-              <img src="https://png.icons8.com/material/50/000000/linkedin.png" alt="LinkedIn" >
-            </v-btn>
-            <v-btn small icon target="_blank" href="mailto:hp_bonfim@hotmail.com?Subject=Oi%20Henrique!">
-              <img src="https://png.icons8.com/material/50/000000/new-message.png" alt="E-mail" >
-            </v-btn>
+              <strong class="subheading">Confira minhas redes sociais!</strong>
+            <v-spacer/>
+            <v-flex dark text-xs-center white--text xs12>
+              <v-btn icon target="_blank" href="https://www.facebook.com/hpbonfim/">
+                <img height="32" src="@/assets/facebook.png" alt="Facebook" >
+              </v-btn>
+              <v-btn small icon target="_blank" href="https://www.instagram.com/hpbonfim/">
+                <img height="32" src="@/assets/instagram.png" alt="Instagram" >
+              </v-btn>
+              <v-btn small icon target="_blank" href="https://www.linkedin.com/in/hpbonfim/">
+                <img height="32" src="@/assets/linkedin.png" alt="LinkedIn" >
+              </v-btn>
+              <v-btn small icon target="_blank" href="mailto:hp_bonfim@hotmail.com?Subject=Oi%20Henrique!">
+                <img height="32" src="@/assets/email.png" alt="E-mail" >
+              </v-btn>
+            </v-flex>
+            <v-divider></v-divider>
+            Todos os Direitos Reservados
+            <p><strong>Henrique Paulo Bonfim</strong>
+            &copy;2018</p>
           </v-flex>
-          <v-divider></v-divider>
-          Todos os Direitos Reservados
-          <p><strong>Henrique Paulo Bonfim</strong>
-          &copy;2018</p>
-        </v-flex>
-      </v-card>
-    </v-footer>
-  <!--
-    <v-footer height="auto" color="dark lighten-1">
-      <v-layout justify-center row wrap>
-        <v-btn v-text="'Início'" to="/" color="dark lighten" flat round></v-btn>
-        <v-btn v-text="'Sobre mim'" to="/About" color="dark lighten" flat round></v-btn>
-        <v-btn v-text="'Mensagens'"  to="/Contact" color="dark" flat round></v-btn>
-        <v-flex dark text-xs-center white--text xs12>
-          <v-divider></v-divider>
-          Todos os Direitos Reservados
-          <p><strong>Henrique Paulo Bonfim</strong>
-          &copy;2018</p>
-        </v-flex>
-      </v-layout>
-    </v-footer>
-  -->
+        </v-card>
+      </v-footer>
   </v-app>
 </template>
 
