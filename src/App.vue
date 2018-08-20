@@ -60,7 +60,7 @@
             <v-card-text>
               <v-container grid-list-md>
                 <v-layout wrap>
-                  <v-flex sm6>
+                  <v-flex>
                     <v-text-field :rules="[rules.required, rules.min]" :type="show2 ? 'text' : 'password'" v-model="nome" box label="Nome*:" hint="Digite seu nome" persistent-hint required></v-text-field>
                   </v-flex>
                   <v-flex>
