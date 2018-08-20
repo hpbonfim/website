@@ -6,59 +6,40 @@
             <v-list-tile-avatar>
             <img src="https://instagram.fbsb9-1.fna.fbcdn.net/vp/d4343a4c55fb655ec7968929488e4ee6/5BD36794/t51.2885-15/sh0.08/e35/s640x640/36545675_253009235285525_4861411690647912448_n.jpg" alt="Henrique" >
             </v-list-tile-avatar>
-          </v-list>
+        </v-list>
         <v-list-tile-action-text>
           <v-flex dark text-xs-center white--text xs12>Full-Stack Development</v-flex>
+          <br>
+          <v-flex dark text-xs-center white--text xs12>Confira meus projetos</v-flex>
         </v-list-tile-action-text>
         <v-list>
-          <v-list-tile-avatar>
+          <v-list-tile-avatar height="48">
             <v-btn icon target="_blank" href="https://github.com/hpbonfim">
             <img src="@/assets/github.png" alt="Github" >
             </v-btn>
           </v-list-tile-avatar>
+          <v-flex dark text-xs-center white--text xs12>GitHub</v-flex>
         </v-list>
-          <v-list>
-            <v-list-tile-avatar>
-              <v-btn icon target="_blank" href="mailto:hp_bonfim@hotmail.com?Subject=Hello%20again">
-               <img src="@/assets/email.png" alt="E-mail" >
-              </v-btn>
-            </v-list-tile-avatar>
-          </v-list>
+        <v-list>
+          <v-list-tile-avatar>
+            <v-btn icon target="_blank" href="https://gitlab.com/hpbonfim">
+              <img src="@/assets/gitlab.png" alt="GitLab" >
+            </v-btn>
+          </v-list-tile-avatar>
+          <v-flex dark text-xs-center white--text xs12>GitLab</v-flex>
+        </v-list>
+        <v-list>
+          <v-list-tile-avatar>
+            <v-btn icon target="_blank" href="https://bitbucket.com/hpbonfim">
+              <img height="48" src="@/assets/bitbucket-logo.png" alt="GitLab" >
+            </v-btn>
+          </v-list-tile-avatar>
+          <v-flex dark text-xs-center white--text xs12>BitBucket</v-flex>
+        </v-list>
         <v-list-tile-action-text>
-        <v-divider></v-divider>
-        <v-flex dark text-xs-center white--text xs12>Social Network</v-flex>
         </v-list-tile-action-text>
-        <v-list>
-          <v-list-tile-avatar>
-            <v-btn icon target="_blank" href="https://www.facebook.com/hpbonfim/">
-              <img src="@/assets/facebook.png" alt="Facebook" >
-            </v-btn>
-          </v-list-tile-avatar>
-        </v-list>
-        <v-list>
-          <v-list-tile-avatar>
-            <v-btn icon target="_blank" href="+5567993434417">
-              <img src="@/assets/wpp.png" alt="Facebook" >
-            </v-btn>
-          </v-list-tile-avatar>
-        </v-list>
-        <v-list>
-          <v-list-tile-avatar>
-            <v-btn icon target="_blank" href="https://www.linkedin.com/in/hpbonfim/">
-              <img src="@/assets/linkedin.png" alt="LinkedIn" >
-            </v-btn>
-          </v-list-tile-avatar>
-        </v-list>
-        <v-list>
-          <v-list-tile-avatar>
-            <v-btn icon target="_blank" href="https://www.instagram.com/hpbonfim/">
-              <img src="@/assets/instagram.png" alt="Instagram" >
-            </v-btn>
-          </v-list-tile-avatar>
-        </v-list>
       </v-navigation-drawer>
       <v-toolbar icon dense app :clipped-left="clipped" tabs>
-        Clique:
         <v-btn icon @click="seta = !seta" @click.stop="drawer = !drawer">
           <v-icon v-if="seta">chevron_left</v-icon>
           <v-icon v-else>chevron_right</v-icon>
@@ -79,17 +60,11 @@
             <v-card-text>
               <v-container grid-list-md>
                 <v-layout wrap>
-                  <v-flex xs12 sm6 md4>
-                    <v-text-field v-model="nome" box label="Nome:" hint="Digite seu nome e sobrenome." persistent-hint required></v-text-field>
+                  <v-flex sm6>
+                    <v-text-field :rules="[rules.required, rules.min]" :type="show2 ? 'text' : 'password'" v-model="nome" box label="Nome*:" hint="Digite seu nome" persistent-hint required></v-text-field>
                   </v-flex>
-                  <v-flex xs12>
-                    <v-text-field v-model="titulo" box label="Título:" hint="Exemplo: Declaração de Amor ao Henrique xD" required></v-text-field>
-                  </v-flex>
-                  <v-flex xs12>
-                    <v-textarea v-model="mensagem" label="Digite sua Mensagem:" auto-grow box  hint="Escreva algo legal! :D"></v-textarea>
-                  </v-flex>
-                  <v-flex xs12 sm6 md4>
-                    <v-text-field v-model="numero" box label="WhatsApp(Caso queira retorno):" hint="Exemplo: 11 9.8765-4321" persistent-hint required></v-text-field>
+                  <v-flex>
+                    <v-textarea :rules="[rules.required, rules.min]" :type="show2 ? 'text' : 'password'" v-model="mensagem" label="Digite sua Mensagem*:" auto-grow box  hint="Escreva algo legal!"></v-textarea>
                   </v-flex>
                 </v-layout>
               </v-container>
@@ -98,7 +73,7 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn color="red" flat @click.native="dialog = false">Close</v-btn>
-              <v-btn color="blue" flat @click="submitMessage()" @click.native="dialog = false">Enviar</v-btn>
+              <v-btn color="blue" v-if="nome && mensagem != ''" flat @click="submitMessage()" @click.native="dialog = false">Enviar</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -125,11 +100,11 @@
               <strong class="subheading">Confira minhas redes sociais!</strong>
             <v-spacer/>
             <v-flex dark text-xs-center white--text xs12>
+              <v-btn small icon target="_blank" href="https://www.instagram.com/hpbonfim/">
+                <img height="32" src="@/assets/instagram1.png" alt="Instagram" >
+              </v-btn>
               <v-btn icon target="_blank" href="https://www.facebook.com/hpbonfim/">
                 <img height="32" src="@/assets/facebook.png" alt="Facebook" >
-              </v-btn>
-              <v-btn small icon target="_blank" href="https://www.instagram.com/hpbonfim/">
-                <img height="32" src="@/assets/instagram.png" alt="Instagram" >
               </v-btn>
               <v-btn small icon target="_blank" href="https://www.linkedin.com/in/hpbonfim/">
                 <img height="32" src="@/assets/linkedin.png" alt="LinkedIn" >
@@ -153,12 +128,18 @@ import {mensagensRef} from '../firebase'
 
 export default {
   data: () => ({
-    title: 'xD >>>',
+    title: '',
     items: [
       {title: 'Inspire', linkpath: '/'},
       {title: 'Adicionar', linkpath: '/About'},
       {title: 'Buscar', linkpath: '/Contact'}
     ],
+    //messages
+    show2: true,
+      rules: {
+        required: value => !!value || 'Campo requerido.',
+        min: v => v.length >= 1 || 'Digite alguma coisa'
+      },
     tabs: null,
     dialog: false,
     seta: false,
@@ -169,24 +150,15 @@ export default {
     drawer: false,
     fixed: false,
     nome: '',
-    numero: '',
-    titulo: '',
     mensagem: ''
   }),
   methods: {
-    next () {
-      alert('Mensagem enviada com sucesso')
-    },
     submitMessage () {
       mensagensRef.push({
         name: this.nome,
-        number: this.numero,
-        title: this.titulo,
         text: this.mensagem
       })
       this.nome = ''
-      this.numero = ''
-      this.titulo = ''
       this.mensagem = ''
     },
     removeMessage (key) {
