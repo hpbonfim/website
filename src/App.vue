@@ -107,7 +107,7 @@
                 <img height="32" src="@/assets/facebook.png" alt="Facebook" >
               </v-btn>
               <v-btn small icon target="_blank" href="https://api.whatsapp.com/send?phone=5567993434417">
-                <img height="32" src="@/assets/whats.png" alt="E-mail" >
+                <img height="32" src="@/assets/whats.png" alt="WhatsApp" >
               </v-btn>
               <v-btn small icon target="_blank" href="https://www.linkedin.com/in/hpbonfim/">
                 <img height="32" src="@/assets/linkedin.png" alt="LinkedIn" >
