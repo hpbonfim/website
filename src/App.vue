@@ -48,7 +48,7 @@
         <v-spacer></v-spacer>
         <v-dialog v-model="dialog" persistent max-width="500px">
           <v-btn slot="activator" icon>
-            <v-badge color="green" left overlap>
+            <v-badge color="blue" left overlap>
               <v-icon slot="badge" dark small >message</v-icon>
               <v-icon>edit</v-icon>
             </v-badge>
@@ -105,6 +105,9 @@
               </v-btn>
               <v-btn icon target="_blank" href="https://www.facebook.com/hpbonfim/">
                 <img height="32" src="@/assets/facebook.png" alt="Facebook" >
+              </v-btn>
+              <v-btn small icon target="_blank" href="https://api.whatsapp.com/send?phone=5567993434417">
+                <img height="32" src="@/assets/whats.png" alt="E-mail" >
               </v-btn>
               <v-btn small icon target="_blank" href="https://www.linkedin.com/in/hpbonfim/">
                 <img height="32" src="@/assets/linkedin.png" alt="LinkedIn" >
