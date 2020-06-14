@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: "Roboto Mono", Consolas, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url('./assets/background.jpg') 100%;
+}
+
+body::before {
+  content: "HP";
+  font-size: 100%;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -35vh;
+}
+
+.container {
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(20, 30, 40, 0.8);
+  border-radius: 8px;
+  border-style: none;
+  border-width: none;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  background: rgba(0, 42, 66, 0.5); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 42, 66); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 81, 128); 
+}

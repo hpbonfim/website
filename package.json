@@ -1,66 +1,47 @@
 {
-  "name": "webhp2",
-  "version": "1.0.0",
-  "description": "webpage",
-  "author": "hpbonfim <hp_bonfim@hotmail.com>",
+  "name": "hpbonfim",
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
-    "build": "node build/build.js"
-  },
   "dependencies": {
-    "firebase": "^5.9.3",
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.3",
-    "vuefire": "^1.4.5",
-    "vuetify": "^1.5.11"
+    "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.47",
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.5",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "chalk": "^2.4.2",
-    "connect-history-api-fallback": "^1.6.0",
-    "copy-webpack-plugin": "^4.6.0",
-    "css-loader": "^2.1.1",
-    "cssnano": "^4.1.10",
-    "eventsource-polyfill": "^0.9.6",
-    "express": "^4.16.4",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^1.1.5",
-    "friendly-errors-webpack-plugin": "^1.6.1",
-    "html-webpack-plugin": "^2.30.1",
-    "http-proxy-middleware": "^0.19.1",
-    "opn": "^5.5.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "ora": "^1.3.0",
-    "rimraf": "^2.6.3",
-    "semver": "^5.7.0",
-    "shelljs": "^0.7.8",
-    "sw-precache-webpack-plugin": "^0.11.4",
-    "uglify-es": "^3.1.3",
-    "url-loader": "^0.6.2",
-    "vue-loader": "^13.7.3",
-    "vue-style-loader": "^3.0.3",
-    "vue-template-compiler": "^2.6.10",
-    "webpack": "^3.7.1",
-    "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-middleware": "^1.12.0",
-    "webpack-hot-middleware": "^2.24.3",
-    "webpack-merge": "^4.2.1"
-  },
-  "engines": {
-    "node": ">= 4.0.0",
-    "npm": ">= 3.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "@types/react-router-dom": "^5.1.5"
+  }
 }

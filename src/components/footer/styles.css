@@ -1,0 +1,25 @@
+
+
+
+
+@media screen and (max-width: 870px) {
+    .story img.sunrise {
+        width: 50%;
+    }
+
+    .story h4 {
+        font-weight: bold;
+        border-bottom: 1px solid #565B73;
+        padding-bottom: 5px;
+        line-height: 1.6;
+
+    }
+
+    .story p {
+        font-size: 10px;
+        text-transform: none;
+        line-height: 1.6;
+        border-bottom: 1px solid #565B73;
+    }
+
+}

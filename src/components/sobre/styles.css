@@ -1,0 +1,207 @@
+.story {
+    color: rgb(255, 255, 255);
+}
+
+.story h4 {
+    font-size: 18px;
+    text-transform: none;
+    text-shadow: none;
+    margin: 5px 0;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0;
+    border-bottom: 1px solid #565B73;
+    padding-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 206, 90);
+}
+
+
+.story p {
+    font-size: 18px;
+    text-transform: none;
+    text-shadow: none;
+    padding-bottom: 5px;
+    line-height: 1.6;
+
+}
+
+
+.story img.sunrise {
+    float: left;
+    margin: 0 15px 0 0;
+    box-shadow: 0 0 2px #000;
+    width: 20%;
+    border-radius: 8px;
+
+}
+
+blockquote {
+    margin: 0 auto;
+    padding: 1em;
+    border-left: 5px solid #999;
+}
+
+blockquote:before {
+    display: none;
+}
+
+blockquote:not(:first-of-type) {
+    margin-top: .5em;
+}
+
+.quote {
+    font-style: italic;
+    line-height: 1.4;
+}
+
+blockquote footer {
+    margin-top: .5em;
+    padding: 0;
+    color: #777;
+    font-size: 10pt;
+    text-align: left;
+    font-style: italic;
+}
+
+blockquote footer:before {
+    content: '— ';
+}
+
+blockquote:nth-of-type(even) {
+    text-align: right;
+    border-left: none;
+    border-right: 5px solid #999;
+}
+
+blockquote:nth-of-type(even) footer {
+    text-align: right;
+}
+
+blockquote:nth-of-type(even) footer:before {
+    content: '';
+}
+
+blockquote:nth-of-type(even) footer:after {
+    content: ' —';
+}
+
+.social {
+    float: right;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+
+
+.instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    border-radius: 4px;
+}
+
+.instagram:hover,
+.soundcloud:hover,
+.stackoverflow:hover,
+.github:hover,
+.linkedin:hover,
+.dockerhub:hover {
+    border-style: solid;
+    border-width: thin;
+    margin: 2px;
+    padding: 2px;
+}
+
+.soundcloud {
+    background: #ff7700;
+    border-radius: 4px;
+}
+
+
+.stackoverflow {
+    background: #242424;
+    border-radius: 4px;
+}
+
+
+.github {
+    background: #242424;
+    border-radius: 4px;
+}
+
+
+
+.linkedin {
+    background: #0077b5;
+    border-radius: 4px;
+}
+
+
+.dockerhub {
+    background: #064c72;
+    border-radius: 4px;
+}
+
+
+@media screen and (max-width: 870px) {
+    .social {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .instagram,
+    .soundcloud,
+    .stackoverflow,
+    .github,
+    .linkedin,
+    .dockerhub {
+        border-style: solid;
+        border-width: thin;
+    }
+
+    .instagram:hover,
+    .soundcloud:hover,
+    .stackoverflow:hover,
+    .github:hover,
+    .linkedin:hover,
+    .dockerhub:hover {
+        border-style: none;
+        border-width: none;
+    }
+
+    blockquote {
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    blockquote footer {
+        font-size: 12px;
+    }
+
+    blockquote:nth-of-type(even) {
+        padding: 1em 1em 1em 20%;
+    }
+
+    .story img.sunrise {
+        width: 30%;
+    }
+
+    .story h4 {
+        font-weight: bold;
+        border-bottom: 1px solid #565B73;
+        padding-bottom: 5px;
+        line-height: 1.6;
+
+    }
+
+    .story p {
+        font-size: 14px;
+        text-transform: none;
+        line-height: 1.6;
+        border-bottom: 1px solid #565B73;
+    }
+
+}
