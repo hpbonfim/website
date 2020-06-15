@@ -12,7 +12,6 @@ const Home = () => {
           <Sobre />
         </main>
         <main>
-          <Footer/>
         </main>
       </div>
     </div>
