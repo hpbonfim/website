@@ -14,11 +14,15 @@
     padding-bottom: 5px;
 }
 
-a {
+.highlight {
     text-decoration: none;
     color: rgb(255, 206, 90);
 }
 
+a {
+    text-decoration: none;
+    color: rgb(6, 142, 206)
+}
 
 .story p {
     font-size: 18px;
@@ -89,39 +93,14 @@ blockquote:nth-of-type(even) footer:after {
     content: ' —';
 }
 
-.social {
-    float: right;
-    display: flex;
-    flex: 1;
-    justify-content: space-around;
-}
-
 
 .instagram {
     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
     border-radius: 4px;
 }
 
-.instagram:hover,
-.soundcloud:hover,
-.stackoverflow:hover,
-.github:hover,
-.linkedin:hover,
-.dockerhub:hover {
-    border-style: solid;
-    border-width: thin;
-    margin: 2px;
-    padding: 2px;
-}
-
 .soundcloud {
     background: #ff7700;
-    border-radius: 4px;
-}
-
-
-.stackoverflow {
-    background: #242424;
     border-radius: 4px;
 }
 
@@ -145,7 +124,168 @@ blockquote:nth-of-type(even) footer:after {
 }
 
 
-@media screen and (max-width: 870px) {
+/* 
+ 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to infinite
+*/
+
+@media (min-width: 1025px) {
+
+    .social {
+        float: right;
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+    }
+
+    .instagram:hover,
+    .soundcloud:hover,
+    .github:hover,
+    .linkedin:hover,
+    .dockerhub:hover {
+        border-style: solid;
+        border-width: thin;
+        background: rgba(20, 30, 40, 0.8);
+    }
+
+    .instagram,
+    .soundcloud,
+    .github,
+    .linkedin,
+    .dockerhub {
+        padding: 10px;
+        margin-left: 5px;
+        margin-top: -1em;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  
+    .social {
+        float: right;
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+    }
+
+    .instagram,
+    .soundcloud,
+    .github,
+    .linkedin,
+    .dockerhub {
+        padding: 10px;
+        margin-left: 5px;
+        margin-top: -1em;
+        border-style: solid;
+        border-width: thin;
+    }
+
+
+    blockquote {
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    blockquote footer {
+        font-size: 12px;
+    }
+
+    blockquote:nth-of-type(even) {
+        padding: 1em 1em 1em 20%;
+    }
+
+    .story img.sunrise {
+        width: 30%;
+    }
+
+    .story h4 {
+        font-weight: bold;
+        border-bottom: 1px solid #565B73;
+        padding-bottom: 5px;
+        line-height: 1.6;
+
+    }
+
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  
+    .social {
+        float: right;
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+    }
+
+    .instagram,
+    .soundcloud,
+    .github,
+    .linkedin,
+    .dockerhub {
+        padding: 10px;
+        margin-left: 10px;
+        margin-top: -1em;
+        border-style: solid;
+        border-width: thin;
+    }
+
+    blockquote {
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    blockquote footer {
+        font-size: 12px;
+    }
+
+    blockquote:nth-of-type(even) {
+        padding: 1em 1em 1em 20%;
+    }
+
+    .story img.sunrise {
+        width: 30%;
+    }
+
+    .story h4 {
+        font-weight: bold;
+        border-bottom: 1px solid #565B73;
+        padding-bottom: 5px;
+        line-height: 1.6;
+
+    }
+
+    .story p {
+        font-size: 14px;
+        text-transform: none;
+        line-height: 1.6;
+        border-bottom: 1px solid #565B73;
+    }
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
     .social {
         display: flex;
         justify-content: space-between;
@@ -153,22 +293,69 @@ blockquote:nth-of-type(even) footer:after {
 
     .instagram,
     .soundcloud,
-    .stackoverflow,
     .github,
     .linkedin,
     .dockerhub {
+        padding: 8px;
         border-style: solid;
         border-width: thin;
     }
 
-    .instagram:hover,
-    .soundcloud:hover,
-    .stackoverflow:hover,
-    .github:hover,
-    .linkedin:hover,
-    .dockerhub:hover {
-        border-style: none;
-        border-width: none;
+    blockquote {
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    blockquote footer {
+        font-size: 12px;
+    }
+
+    blockquote:nth-of-type(even) {
+        padding: 1em 1em 1em 20%;
+    }
+
+    .story img.sunrise {
+        width: 30%;
+    }
+
+    .story h4 {
+        font-weight: bold;
+        border-bottom: 1px solid #565B73;
+        padding-bottom: 5px;
+        line-height: 1.6;
+
+    }
+
+    .story p {
+        font-size: 14px;
+        text-transform: none;
+        line-height: 1.6;
+        border-bottom: 1px solid #565B73;
+    }
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .social {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .instagram,
+    .soundcloud,
+    .github,
+    .linkedin,
+    .dockerhub {
+        padding: 4px;
+        border-style: solid;
+        border-width: thin;
     }
 
     blockquote {

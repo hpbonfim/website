@@ -3,7 +3,7 @@ import API from '../../config/axios'
 import './styles.css'
 import jsonMeta from '../../config/metadata.json'
 import { AiFillLinkedin } from "react-icons/ai";
-import { FaDocker, FaStackOverflow, FaSoundcloud } from 'react-icons/fa'
+import { FaDocker, FaSoundcloud } from 'react-icons/fa'
 import { TiSocialInstagram, TiSocialGithub } from "react-icons/ti";
 import { IconContext } from "react-icons";
 
@@ -19,13 +19,12 @@ interface Data {
 const Sobre = () => {
     const URI = "https://instagram.fcgh4-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/83895807_486590705372598_7389277521113129462_n.jpg?_nc_ht=instagram.fcgh4-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=DHnbSAKIyAgAX8dnnqZ&oh=3c2f7bc21a0f229a1f9aee20766befd0&oe=5F0CA443"
     /* SOCIAL NETWORK */
-    const [dockerhub, setDockerhub] = useState("")
-    const [github, setGithub] = useState("")
-    const [instagram, setInstagram] = useState("")
-    const [linkedin, setLinkedin] = useState("")
-    const [stackoverflow, setStackoverflow] = useState("")
-    const [soundcloud, setSoundcloud] = useState("")
-
+    const [dockerhub, setDockerhub] = useState("hub.docker.com/u/hpbonfim")
+    const [github, setGithub] = useState("github.com/hpbonfim")
+    const [instagram, setInstagram] = useState("instagram.com/hpbonfim")
+    const [linkedin, setLinkedin] = useState("linkedin.com/in/hpbonfim")
+    const [soundcloud, setSoundcloud] = useState("soundcloud.com/hpbonfim")
+/*
     useEffect(() => {
         API.get("")
             .then(response => {
@@ -35,7 +34,6 @@ const Sobre = () => {
                 setGithub(meta.github)
                 setInstagram(meta.instagram)
                 setLinkedin(meta.linkedin)
-                setStackoverflow(meta.stackoverflow)
                 setSoundcloud(meta.soundcloud)
             })
             .catch(err => {
@@ -43,7 +41,6 @@ const Sobre = () => {
                 setGithub(jsonMeta.github)
                 setInstagram(jsonMeta.instagram)
                 setLinkedin(jsonMeta.linkedin)
-                setStackoverflow(jsonMeta.stackoverflow)
                 setSoundcloud(jsonMeta.soundcloud)
             })
     }, [])
@@ -57,20 +54,24 @@ const Sobre = () => {
                 <img className="sunrise" src={URI} alt="Minha Foto" />
                 <p>
                     A cada dia que se passa, nossas vidas são vividas dentro de computadores.
-                    Esse vasto universo virtual, que chamamos de <strong> Internet </strong>, é o
+                    Esse vasto universo virtual, que chamamos de <strong> Internet</strong>, é o
                     lar de inúmeros mundos e se expande a cada segundo de cada dia e a capacidade
-                    para escrever <strong> códigos </strong>, se tornou-se um recurso precioso.
+                    para escrever <strong> códigos</strong>, se tornou-se um recurso precioso.
                 </p>
                 <p>
-                    Sou formado em TI e desenvolvo sistemas desde 2016, onde contribuo até hoje
-                    para diversos projetos open-source e privados.
+                    Desenvolvo sistemas desde 2016 e acredito que um bom desenvolvedor surge no momento onde você começa a perceber que um <span className="highlight"> código é uma extensão da maneira de pensar do ser humano</span>, 
+                    nossa forma de pensar e agir pode ser totalmente interpretada e escrita por computadores e a forma de resolver problemas sempre será uma qualidade essencial para
+                    qualquer pessoa que goste de resolvê-las &#128378;.
+                </p> 
+                <p> Faço parte da comunidade open-source onde contribuo até hoje
+                    para diversos projetos públicos e privados.
                     Atualmente estou estudando para certificação da
                     <b>
                         <a href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer" rel="noopener noreferrer" target="_blank">
                             &nbsp;Microsoft Certified: DevOps Engineer Expert&nbsp;
                         </a>
                     </b>
-                    e um dos meus hobbies preferidos é tocar guitarra, teclado e violão nas horas vagas.
+                    pois o conhecimento deve ser algo constantemente renovado... 
                 </p>
                 <blockquote className="quote">
                     "Few are those who see with their own eyes and feel with their own hearts"
@@ -98,14 +99,6 @@ const Sobre = () => {
                             <AiFillLinkedin />
                         </a>
                     </IconContext.Provider>
-
-
-                    <IconContext.Provider value={{ color: "#fff", size: "2em", className: "stackoverflow" }}>
-                        <a href={`https://${stackoverflow}`} rel="noopener noreferrer" target="_blank">
-                            <FaStackOverflow />
-                        </a>
-                    </IconContext.Provider>
-
 
                     <IconContext.Provider value={{ color: "#fff", size: "2em", className: "instagram" }}>
                         <a href={`https://${instagram}`} rel="noopener noreferrer" target="_blank">
