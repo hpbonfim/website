@@ -14,6 +14,9 @@ const Home = () => {
         <main>
           <Projetos />
         </main>
+        <main>
+          <br></br>
+        </main>
       </div>
     </div>
   );
