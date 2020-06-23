@@ -1,3 +1,13 @@
+.container {
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgba(20, 30, 40, 0.8);
+    border-radius: 8px;
+    border-style: none;
+    border-width: none;
+  }
+  
+
 .story {
     color: rgb(255, 255, 255);
 }
@@ -26,10 +36,10 @@ a {
 
 .story p {
     font-size: 18px;
+    line-height: 1.6;
     text-transform: none;
     text-shadow: none;
     padding-bottom: 5px;
-    line-height: 1.6;
 
 }
 

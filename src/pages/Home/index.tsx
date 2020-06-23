@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 import Sobre from '../../components/sobre'
-import Footer from '../../components/footer';
+import Projetos from '../../components/projetos';
 
 const Home = () => {
 
@@ -12,6 +12,7 @@ const Home = () => {
           <Sobre />
         </main>
         <main>
+          <Projetos />
         </main>
       </div>
     </div>
