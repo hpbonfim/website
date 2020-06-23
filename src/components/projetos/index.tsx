@@ -36,7 +36,7 @@ const projectData = [
         "id": 3,
         "title": "Mideal",
         "text": "Projeto Top 50 do Megahack v2 2020, plataforma construída com NodeJS, Angular e infraestrutura do Google Cloud, visa construir um sistema blockchain para criação de contratos jurídicos com 100% de integridade legal e transparência.",
-        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/mideal800x600.pngf",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/mideal800x600.png",
         "link": "https://github.com/hpbonfim/MegaHack-v2-2020-Projeto-Mideal"
     },
     {
@@ -88,7 +88,7 @@ const Projetos = () => {
 
                     <div className="card-list">
                         <header className="card-header">
-                            <img className="card-header-image" src={"https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/projects800x600.png"} alt={"projects"} />
+                            <img className="card-header-image" src={"https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/projects800x600.jpg"} alt={"projects"} />
                         </header>
                         <div className="card-footer">
                             <a href={"https://github.com/hpbonfim?tab=repositories"} rel="noopener noreferrer" target="_blank">
