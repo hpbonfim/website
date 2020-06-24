@@ -18,15 +18,15 @@ const Sobre = () => {
         <div className="container">
             <div className="story">
                 <h4>The story so far...</h4>
-                <img className="sunrise" src={URI} alt="Minha Foto" />
+                <img className="perfil" src={URI} alt="Minha Foto" />
                 <p>
                     A cada dia que se passa, nossas vidas são vividas dentro de computadores.
                     Esse vasto universo virtual, que chamamos de <strong> Internet</strong>, é o
                     lar de inúmeros mundos e se expande a cada segundo de cada dia e a capacidade
-                    para escrever <strong> códigos</strong>, se tornou-se um recurso precioso.
+                    para escrever <strong> códigos</strong>, tornou-se um recurso precioso.
                 </p>
                 <p>
-                    Desenvolvo sistemas desde 2016 e acredito que um bom desenvolvedor surge no momento onde você começa a perceber que um <span className="highlight"> código é uma extensão da maneira de pensar do ser humano</span>,
+                    Desenvolvo sistemas desde 2015 e acredito que um bom desenvolvedor surge no momento onde você começa a perceber que um <span className="highlight"> código é uma extensão da maneira de pensar do ser humano</span>,
                     nossa forma de pensar e agir pode ser totalmente interpretada e escrita por computadores e a forma de resolver problemas sempre será uma qualidade essencial para
                     qualquer pessoa que goste de resolvê-las &#128378;.
                 </p>
@@ -52,14 +52,11 @@ const Sobre = () => {
                         </a>
                     </IconContext.Provider>
 
-
                     <IconContext.Provider value={{ color: "#fff", size: "2em", className: "github" }}>
                         <a href={`https://${github}`} rel="noopener noreferrer" target="_blank">
                             <TiSocialGithub />
                         </a>
                     </IconContext.Provider>
-
-
 
                     <IconContext.Provider value={{ color: "#fff", size: "2em", className: "linkedin" }}>
                         <a href={`https://${linkedin}`} rel="noopener noreferrer" target="_blank">
@@ -72,7 +69,6 @@ const Sobre = () => {
                             <TiSocialInstagram />
                         </a>
                     </IconContext.Provider>
-
 
                     <IconContext.Provider value={{ color: "#fff", size: "2em", className: "soundcloud" }}>
                         <a href={`https://${soundcloud}`} rel="noopener noreferrer" target="_blank">

@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img src="logo.png" width="30%" />
+    <img src="images/logo.png" width="30%" />
 </p>
   <p align="center">
   <a href="https://github.com/hpbonfim/hpbonfim#readme">

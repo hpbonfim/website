@@ -10,7 +10,7 @@
 
 # production
 /build
-
+src/pages/404
 # misc
 .DS_Store
 .env.local

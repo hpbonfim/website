@@ -1,6 +1,6 @@
 {
-  "name": "hpbonfim",
-  "version": "0.1.0",
+  "name": "hpb",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.10.1",

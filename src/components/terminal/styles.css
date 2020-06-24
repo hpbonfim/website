@@ -39,7 +39,7 @@
   font-weight: bold;
 }
 
-.bash {
+.terminal .bash {
   color: skyblue;
   -webkit-animation: type .5s 1s steps(20, end) forwards;
   -moz-animation: type .5s 1s steps(20, end) forwards;
@@ -47,15 +47,15 @@
   animation: type .5s 1s steps(20, end) forwards;
 }
 
-.cursor {
-  -webkit-animation: blink 1s 1.5s infinite;
-  -moz-animation: blink 1s 2s infinite;
-  -o-animation: blink 1s 2s infinite;
-  animation: blink 1s 2s infinite;
+.terminal .bash .cursor {
+  -webkit-animation: blink 0.4s 0.4s infinite;
+  -moz-animation: blink 0.4s 0.4s infinite;
+  -o-animation: blink 0.4s 0.4s infinite;
+  animation: blink 0.4s 0.4s infinite;
 }
 
 
-.message {
+.terminal .message {
   color: #fff;
   -webkit-animation: type .5s 3s steps(20, end) forwards;
   -moz-animation: type .5s 3s steps(20, end) forwards;
@@ -63,10 +63,25 @@
   animation: type .5s 3s steps(20, end) forwards;
 }
 
-.red-heart {
+.terminal .message .red-heart {
   color: red;
 }
 
+.terminal .clock{
+  color: #fff;
+  -webkit-animation: type .5s 3.5s steps(20, end) forwards;
+  -moz-animation: type .5s 3.5s steps(20, end) forwards;
+  -o-animation: type .5s 3.5s steps(20, end) forwards;
+  animation: type .5s 3.5s steps(20, end) forwards;
+}
+
+.terminal .clock .red-heart-clock {
+  color: red;
+  -webkit-animation: blink 1s 1s infinite;
+  -moz-animation: blink 1s 1s infinite;
+  -o-animation: blink 1s 1s infinite;
+  animation: blink 1s 1s infinite;
+}
 
 
 @-webkit-keyframes blink {
@@ -159,25 +174,25 @@
 
 @-webkit-keyframes type {
   to {
-    width: 17em;
+    width: 25em;
   }
 }
 
 @-moz-keyframes type {
   to {
-    width: 17em;
+    width: 25em;
   }
 }
 
 @-o-keyframes type {
   to {
-    width: 17em;
+    width: 25em;
   }
 }
 
 @keyframes type {
   to {
-    width: 17em;
+    width: 25em;
   }
 }
 

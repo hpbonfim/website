@@ -1,8 +1,8 @@
-import React from 'react';
-import './styles.css';
+import React from 'react'
+import './styles.css'
 import Sobre from '../../components/sobre'
-import Projetos from '../../components/projetos';
-import Terminal from '../../components/terminal';
+import Projetos from '../../components/projetos'
+import Terminal from '../../components/terminal'
 
 const Home = () => {
 
@@ -23,7 +23,7 @@ const Home = () => {
         </main>
       </div>
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home

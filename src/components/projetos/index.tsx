@@ -56,7 +56,6 @@ const Projetos = () => {
         setProjects(projectData)
     }, [])
 
-
     return (
         <div className="container">
             <div className="projects">
@@ -85,7 +84,6 @@ const Projetos = () => {
                             </div>
                         ))
                     }
-
                     <div className="card-list">
                         <header className="card-header">
                             <img className="card-header-image" src={"https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/projects800x600.jpg"} alt={"projects"} />
@@ -110,6 +108,5 @@ const Projetos = () => {
         </div>
     )
 }
-
 
 export default Projetos
