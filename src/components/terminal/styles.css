@@ -67,7 +67,8 @@
   color: red;
 }
 
-.terminal .clock{
+
+.terminal .clock {
   color: #fff;
   -webkit-animation: type .5s 3.5s steps(20, end) forwards;
   -moz-animation: type .5s 3.5s steps(20, end) forwards;
@@ -82,7 +83,6 @@
   -o-animation: blink 1s 1s infinite;
   animation: blink 1s 1s infinite;
 }
-
 
 @-webkit-keyframes blink {
   0% {
@@ -209,7 +209,7 @@
     padding-left: 1vw;
     font-size: 20px;
   }
- 
+
 }
 
 /* 

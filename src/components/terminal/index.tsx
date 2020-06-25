@@ -12,7 +12,7 @@ const Terminal = () => {
             setTime(nextTick)
         }
         setInterval(() => Tick(), 1000)
-    }, []);
+    }, [])
 
     return (
         <div className="terminal">
@@ -21,7 +21,7 @@ const Terminal = () => {
                 <span className="cursor">_</span>
             </p>
             <p className="message">
-                <b className="red-heart"> &#x2765;</b>
+                <b className="red-heart"> &#x2764;</b>
                 &nbsp;Bem vindo ao meu Website!
             </p>
             <p className="clock">
@@ -31,6 +31,5 @@ const Terminal = () => {
         </div>
     )
 }
-
 
 export default Terminal

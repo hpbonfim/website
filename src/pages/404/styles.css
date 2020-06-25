@@ -1,0 +1,346 @@
+.central-body {
+    /*    width: 100%;*/
+    padding: 17% 5% 10% 5%;
+    text-align: center;
+}
+
+.image-404 {
+    position: relative;
+    z-index: 100;
+    pointer-events: none;
+    width: 300px
+}
+
+.btn-go-home {
+    position: relative;
+    z-index: 200;
+    margin: 15px auto;
+    width: 100px;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    background-color: rgb(20, 30, 40);
+    border-radius: 100px;
+    font-weight: 400;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 11px;
+}
+
+.btn-go-home:hover {
+    border-style: solid;
+    border-width: thin;
+    background: rgba(20, 30, 40, 0.5);
+}
+
+
+.objects img {
+    z-index: 90;
+    pointer-events: none;
+}
+
+.object_rocket {
+    z-index: 95;
+    position: absolute;
+    transform: scaleY(-1);
+    transform: translateX(-50px);
+    pointer-events: none;
+    animation: rocket-movement 200s linear infinite both running;
+    -webkit-transform: rotate(75deg);
+    -moz-transform: rotate(75deg);
+    -o-transform: rotate(75deg);
+    transform: rotate(75deg);
+}
+
+.object_earth {
+    position: absolute;
+    z-index: 90;
+    animation: spin-earth 100s infinite linear both;
+}
+
+.object_moon {
+    position: absolute;
+    transform: rotate(0deg);
+    transition: transform ease-in 99999999999s;
+}
+
+.object_astronaut {
+    animation: rotate-astronaut 200s infinite linear both alternate;
+}
+
+.box_astronaut {
+    z-index: 110 !important;
+    position: absolute;
+    will-change: transform;
+    animation: move-astronaut 50s infinite linear both alternate;
+}
+
+.spin-earth-on-hover {
+    transition: ease 200s !important;
+    transform: rotate(-3600deg) !important;
+}
+
+@-moz-keyframes rocket-movement {
+    100% {
+        -moz-transform: translate(1200px, -600px);
+    }
+}
+
+@-webkit-keyframes rocket-movement {
+    100% {
+        -webkit-transform: translate(1200px, -600px);
+    }
+}
+
+@keyframes rocket-movement {
+    100% {
+        transform: translate(1200px, -600px);
+    }
+}
+
+@-moz-keyframes spin-earth {
+    100% {
+        -moz-transform: rotate(-360deg);
+        transition: transform 20s;
+    }
+}
+
+@-webkit-keyframes spin-earth {
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transition: transform 20s;
+    }
+}
+
+@keyframes spin-earth {
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+        transition: transform 20s;
+    }
+}
+
+@-moz-keyframes move-astronaut {
+    100% {
+        -moz-transform: translate(-160px, -160px);
+    }
+}
+
+@-webkit-keyframes move-astronaut {
+    100% {
+        -webkit-transform: translate(-160px, -160px);
+    }
+}
+
+@keyframes move-astronaut {
+    100% {
+        -webkit-transform: translate(-160px, -160px);
+        transform: translate(-160px, -160px);
+    }
+}
+
+@-moz-keyframes rotate-astronaut {
+    100% {
+        -moz-transform: rotate(-720deg);
+    }
+}
+
+@-webkit-keyframes rotate-astronaut {
+    100% {
+        -webkit-transform: rotate(-720deg);
+    }
+}
+
+@keyframes rotate-astronaut {
+    100% {
+        -webkit-transform: rotate(-720deg);
+        transform: rotate(-720deg);
+    }
+}
+
+/* 
+ 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to infinite
+*/
+
+@media (min-width: 1025px) {
+
+
+
+    .object_rocket {
+        top: 35%;
+        width: 400px;
+    }
+
+    .object_earth {
+        top: 10%;
+        left: 10%;
+        width: 200px;
+    }
+
+    .object_moon {
+        top: 12%;
+        left: 25%;
+        width: 80px;
+    }
+
+    .object_astronaut {
+        width: 500px;
+    }
+
+    .box_astronaut {
+        top: 00%;
+        right: 20%;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .object_rocket {
+        top: 35%;
+        width: 300px;
+    }
+
+    .object_earth {
+        top: 10%;
+        left: 10%;
+        width: 200px;
+    }
+
+    .object_moon {
+        top: 8%;
+        left: 45%;
+        width: 80px;
+    }
+
+    .object_astronaut {
+        width: 400px;
+    }
+
+    .box_astronaut {
+        top: 10%;
+        right: 10%;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .object_rocket {
+        top: 55%;
+        width: 200px;
+    }
+
+    .object_earth {
+        top: 10%;
+        left: 10%;
+        width: 200px;
+    }
+
+    .object_moon {
+        top: 8%;
+        left: 45%;
+        width: 80px;
+    }
+
+
+    .object_astronaut {
+        width: 300px;
+    }
+
+    .box_astronaut {
+        top: 10%;
+        right: 10%;
+    }
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .object_rocket {
+        top: 50%;
+        width: 300px;
+    }
+
+    .object_earth {
+        top: 10%;
+        left: 10%;
+        width: 200px;
+    }
+
+    .object_moon {
+        top: 8%;
+        left: 45%;
+        width: 80px;
+    }
+
+
+    .object_astronaut {
+        width: 300px;
+    }
+
+    .box_astronaut {
+        top: 10%;
+        right: 20%;
+    }
+
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .image-404 {
+        padding-top: 50vw
+    }
+
+    .object_rocket {
+        top: 50%;
+        width: 200px
+    }
+
+    .object_earth {
+        top: 10%;
+        left: 10%;
+        width: 200px
+    }
+
+    .object_moon {
+        top: 8%;
+        left: 65%;
+        width: 80px
+    }
+
+    .object_astronaut {
+        width: 200px;
+    }
+
+    .box_astronaut {
+        top: 10%;
+        right: 20%;
+    }
+
+
+
+}
