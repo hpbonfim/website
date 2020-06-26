@@ -3,6 +3,7 @@ import './styles.css'
 import Sobre from '../../components/sobre'
 import Projetos from '../../components/projetos'
 import Terminal from '../../components/terminal'
+import Skills from '../../components/skills'
 
 const Home = () => {
 
@@ -14,6 +15,9 @@ const Home = () => {
         </main>
         <main>
           <Sobre />
+        </main>
+        <main>
+          <Skills />
         </main>
         <main>
           <Projetos />
