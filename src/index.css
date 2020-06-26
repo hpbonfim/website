@@ -1,12 +1,17 @@
 body {
   margin: 0;
-  background-size: fixed;
+  font-family: "Roboto Mono", Consolas, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  background: url('./assets/background.jpg') no-repeat top;
-  font-family: "Roboto Mono", Consolas, monospace;
+}
 
+html { 
+  background: url('./assets/background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   /* Disable right click */
   -webkit-user-select: none;
   /* Chrome all / Safari all */
@@ -16,6 +21,7 @@ body {
   /* IE 10+ */
   -o-user-select: none;
   user-select: none;
+
 }
 
 .container {
