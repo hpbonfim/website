@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "title": "HTML",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/frontend/html240x240.png",
+        "link": "https://html.spec.whatwg.org/multipage/"
+    },
+    {
+        "id": 1,
+        "title": "CSS",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/frontend/css240x240.png",
+        "link": "https://www.w3.org/Style/CSS/Overview.en.html"
+    },
+    {
+        "id": 2,
+        "title": "Angular",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/frontend/angular240x240.png",
+        "link": "https://angular.io/"
+    },
+    {
+        "id": 3,
+        "title": "React",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/frontend/react240x240.png",
+        "link": "https://pt-br.reactjs.org/"
+    },
+    {
+        "id": 4,
+        "title": "Vue",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/frontend/vue240x240.png",
+        "link": "https://vuejs.org/"
+    },
+    {
+        "id": 5,
+        "title": "Flask",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/backend/python240x240.png",
+        "link": "https://flask.palletsprojects.com/en/1.1.x/"
+    }
+]

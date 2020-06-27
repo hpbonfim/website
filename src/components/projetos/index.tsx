@@ -24,7 +24,7 @@ const Projetos = () => {
                 <h4>My little projects...</h4>
                 <div className="card">
                     {
-                        projectData.map(project => (
+                        project.map(project => (
                             <div key={project.id} className="card-list">
                                 <div className="card-header">
                                     <img className="card-header-image" src={project.image} alt={project.title} />

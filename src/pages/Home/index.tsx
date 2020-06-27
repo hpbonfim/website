@@ -17,10 +17,10 @@ const Home = () => {
           <Sobre />
         </main>
         <main>
-          <Skills />
+          <Projetos />
         </main>
         <main>
-          <Projetos />
+          <Skills />
         </main>
         <main>
           <br></br>

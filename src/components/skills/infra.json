@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "title": "AWS",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/infra/aws240x240.png",
+        "link": "https://aws.amazon.com/"
+    },
+    {
+        "id": 1,
+        "title": "Azure",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/infra/azure240x240.png",
+        "link": "https://azure.microsoft.com/en-us/"
+    },
+    {
+        "id": 2,
+        "title": "Google Cloud",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/infra/gcloud240x240.png",
+        "link": "https://cloud.google.com/"
+    },
+    {
+        "id": 3,
+        "title": "Docker",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/infra/docker240x240.png",
+        "link": "http://docker.io/"
+    },
+    {
+        "id": 4,
+        "title": "Kubernetes",
+        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/infra/kubernetes240x240.png",
+        "link": "https://kubernetes.io/pt/"
+    }
+]
