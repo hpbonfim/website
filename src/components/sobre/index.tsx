@@ -26,6 +26,10 @@ const Sobre = () => {
                     para escrever <strong> códigos</strong>, tornou-se um recurso precioso.
                 </p>
                 <p>
+                    Meu nome é Henrique, tenho 24 anos e sou apaixonado pelo mundo tech desde pequeno. Sempre fui uma criança curiosa sobre as coisas e fazia diversas artimanhas,
+                    quebrava meus carrinhos para descobrir como funcionava e montava tudo novamente para minha mãe não descobrir (rsrsrs) e essa curiosidade me fez estudar, descobrir e criar cada vez mais.
+                </p>
+                <p>
                     Desenvolvo sistemas desde 2015 e acredito que um bom desenvolvedor surge no momento onde você começa a perceber que um <span className="highlight"> código é uma extensão da maneira de pensar do ser humano</span>,
                     nossa forma de pensar e agir pode ser totalmente interpretada e escrita por computadores e a forma de resolver problemas sempre será uma qualidade essencial para
                     qualquer pessoa que goste de resolvê-las &#128378;.
