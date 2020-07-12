@@ -3,36 +3,36 @@
         "id": 0,
         "title": "Redis",
         "link": "https://redis.io/",
-        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/db/redis240x240.png"
+        "image": "https://raw.githubusercontent.com/hpbonfim/website/master/src/assets/skills-page/db/redis240x240.png"
     },
     {
         "id": 1,
         "title": "MongoDB",
         "link": "https://www.mongodb.com/",
-        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/db/mongodb240x240.png"
+        "image": "https://raw.githubusercontent.com/hpbonfim/website/master/src/assets/skills-page/db/mongodb240x240.png"
     },
     {
         "id": 2,
         "title": "MySQL",
         "link": "https://www.mysql.com/",
-        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/db/mysql240x240.png"
+        "image": "https://raw.githubusercontent.com/hpbonfim/website/master/src/assets/skills-page/db/mysql240x240.png"
     },
     {
         "id": 3,
         "title": "Azure SQL",
         "link": "https://azure.microsoft.com/pt-br/services/sql-database/",
-        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/db/azuresql240x240.png"
+        "image": "https://raw.githubusercontent.com/hpbonfim/website/master/src/assets/skills-page/db/azuresql240x240.png"
     },
     {
         "id": 4,
         "title": "Firebase",
         "link": "https://firebase.google.com/docs/database?hl=pt-br",
-        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/db/firebase240x240.png"
+        "image": "https://raw.githubusercontent.com/hpbonfim/website/master/src/assets/skills-page/db/firebase240x240.png"
     },
     {
         "id": 5,
         "title": "AWS RDS",
         "link": "https://aws.amazon.com/pt/rds/",
-        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/db/rds240x240.png"
+        "image": "https://raw.githubusercontent.com/hpbonfim/website/master/src/assets/skills-page/db/rds240x240.png"
     }
 ]

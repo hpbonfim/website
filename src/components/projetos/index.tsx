@@ -48,7 +48,7 @@ const Projetos = () => {
                     }
                     <div className="card-list">
                         <header className="card-header">
-                            <img className="card-header-image" src={"https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/projetos-page/projects800x600.jpg"} alt={"projects"} />
+                            <img className="card-header-image" src={"https://raw.githubusercontent.com/hpbonfim/website/master/src/assets/projetos-page/projects800x600.jpg"} alt={"projects"} />
                         </header>
                         <div className="card-footer">
                             <a href={"https://github.com/hpbonfim?tab=repositories"} rel="noopener noreferrer" target="_blank">

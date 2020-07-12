@@ -2,19 +2,19 @@
     {
         "id": 0,
         "title": "Android",
-        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/mobile/android240x240.png",
+        "image": "https://raw.githubusercontent.com/hpbonfim/website/master/src/assets/skills-page/mobile/android240x240.png",
         "link": "https://developer.android.com/kotlin"
     },
     {
         "id": 1,
         "title": "React Native",
-        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/frontend/react240x240.png",
+        "image": "https://raw.githubusercontent.com/hpbonfim/website/master/src/assets/skills-page/frontend/react240x240.png",
         "link": "https://reactnative.dev/"
     },
     {
         "id": 2,
         "title": "Flutter",
-        "image": "https://raw.githubusercontent.com/hpbonfim/hpbonfim/master/src/assets/skills-page/mobile/flutter240x240.png",
+        "image": "https://raw.githubusercontent.com/hpbonfim/website/master/src/assets/skills-page/mobile/flutter240x240.png",
         "link": "https://flutter.dev/"
     }
 ]
