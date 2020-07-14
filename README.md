@@ -1,6 +1,8 @@
 
 <p align="center">
-    <img src="images/logo.png" width="30%" />
+    <a href="https://hp-bonfim.web.app">
+        <img src="images/logo.png" width="30%" />
+    </a>
 </p>
   <p align="center">
   <a href="https://github.com/hpbonfim/website#readme">
