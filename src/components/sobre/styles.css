@@ -34,12 +34,14 @@ a {
 }
 
 .story img.perfil {
+
     float: left;
-    margin: 0 15px 0 0;
+    margin: 18px 15px 0 0;
     box-shadow: 0 0 2px #000;
-    width: 20%;
     border-radius: 8px;
-    max-width: 100%;
+    width: 50%;
+    height: auto;
+    max-width: 200px;
 }
 
 blockquote {
