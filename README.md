@@ -1,6 +1,8 @@
 
 <p align="center">
-    <img src="images/logo.png" width="30%" />
+    <a href="https://hp-bonfim.web.app">
+        <img src="images/logo.png" width="30%" />
+    </a>
 </p>
   <p align="center">
   <a href="https://github.com/hpbonfim/website#readme">
@@ -27,7 +29,3 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="https://github.com/hpbonfim/website#readme" />
   </a>
   </p>
-<h1 align="center">HPB >> Henrique Paulo Bonfim</h1>
-<h2 align="center">Be my guest >>
-<a href="https://hp-bonfim.web.app/"> WEBSITE </a>
-</h2>
