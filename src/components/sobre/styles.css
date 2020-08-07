@@ -39,7 +39,7 @@ a {
     box-shadow: 0 0 2px #000;
     width: 20%;
     border-radius: 8px;
-
+    max-width: 100%;
 }
 
 blockquote {

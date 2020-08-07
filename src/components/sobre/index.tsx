@@ -6,7 +6,7 @@ import { TiSocialInstagram, TiSocialGithub } from "react-icons/ti";
 import { IconContext } from "react-icons";
 
 const Sobre = () => {
-    const URI = "https://instagram.fcgh4-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/83895807_486590705372598_7389277521113129462_n.jpg?_nc_ht=instagram.fcgh4-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=DHnbSAKIyAgAX8dnnqZ&oh=3c2f7bc21a0f229a1f9aee20766befd0&oe=5F0CA443"
+    const URI = "https://media-exp1.licdn.com/dms/image/C4D03AQEcPpb8ZzvHEg/profile-displayphoto-shrink_200_200/0?e=1602115200&v=beta&t=qdD_V4lptYdIUq7KfzNONmdyvgPgRnov39KGBbG6MSw"
     /* SOCIAL NETWORK */
     const dockerhub: string = "hub.docker.com/u/hpbonfim"
     const github: string = "github.com/hpbonfim"
