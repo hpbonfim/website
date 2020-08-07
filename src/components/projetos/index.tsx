@@ -13,16 +13,43 @@ interface ProjectData {
 
 const Projetos = () => {
     const [project, setProjects] = useState<ProjectData[]>([])
+    const [arrowStyle, setArrowStyle] = useState<string>("⇉")
+    const [isToggled, setToggle] = useState<Boolean>(false)
+    const [view, setView] = useState<string>("none")
 
     useEffect(() => {
         setProjects(projectData)
-    }, [])
+        changeStyle(isToggled)
+    }, [isToggled])
+
+    function handleToggle(e: any) {
+        e.preventDefault()
+        return isToggled === true ? setToggle(false) : setToggle(true)
+    }
+ 
+    function changeStyle(value: Boolean) {
+        if (value) {
+            setArrowStyle("⇊")
+            setView("")
+        } else {
+            setArrowStyle("⇉")
+            setView("none")
+        }
+    }
+
+    const style = {
+        display: view
+    }
+
 
     return (
         <div className="container">
             <div className="projects">
-                <h4>My little projects...</h4>
-                <div className="card">
+            <span onClick={handleToggle} >
+                    {arrowStyle} My little projects...
+                </span>
+                <hr></hr>
+                <div className="card" style={style}>
                     {
                         project.map(project => (
                             <div key={project.id} className="card-list">

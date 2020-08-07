@@ -3,18 +3,9 @@
     width: 100%;
 }
 
-.container .projects h4 {
-    font-size: 18px;
-    text-transform: none;
-    text-shadow: none;
-    margin: 5px 0;
-    font-weight: bold;
-    line-height: 1.6;
-    letter-spacing: 0;
-    border-bottom: 1px solid #565B73;
-    padding-bottom: 5px;
+.container .projects span {
+    cursor: pointer;
 }
-
 
 .container .projects .card .card-list a span svg {
     color: #FFF;
@@ -61,7 +52,7 @@
   ##Screen = B/w 1025px to infinite
 */
 
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 2048px) {
 
     .card {
         display: flex;
@@ -104,7 +95,7 @@
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
     .card::-webkit-scrollbar {
         display: none;

@@ -22,6 +22,9 @@ const Skills = () => {
     const [backend, setBackend] = useState<Skills[]>([])
     const [frontend, setFrontend] = useState<Skills[]>([])
     const [infrastructure, setInfrastructure] = useState<Skills[]>([])
+    const [arrowStyle, setArrowStyle] = useState<string>("⇉")
+    const [isToggled, setToggle] = useState<Boolean>(false)
+    const [view, setView] = useState<string>("none")
 
     useEffect(() => {
         setDb(dbJson)
@@ -30,130 +33,153 @@ const Skills = () => {
         setBackend(backendJson)
         setFrontend(frontendJson)
         setInfrastructure(infraJson)
-    }, [])
+        changeStyle(isToggled)
+    }, [isToggled])
 
+    function handleToggle(e: any) {
+        e.preventDefault()
+        return isToggled === true ? setToggle(false) : setToggle(true)
+    }
+ 
+    function changeStyle(value: Boolean) {
+        if (value) {
+            setArrowStyle("⇊")
+            setView("")
+        } else {
+            setArrowStyle("⇉")
+            setView("none")
+        }
+    }
+
+    const style = {
+        display: view
+    }
 
     return (
         <div className="container">
             <div className="skills">
-                <h4 >
-                    My Skills...
-                </h4>
-                <div className="infra">
-                    <h3> Infrastruture </h3>
-                    <ul>
-                        {
-                            infrastructure.map(info => (
-                                <li key={info.id}>
-                                    <div className="outside">
-                                        <a href={info.link} rel="noopener noreferrer" target="_blank">
-                                            <div className="inside">
-                                                <img src={info.image} alt={info.title} />
-                                                <p>{info.title}</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-                <div className="tools">
-                    <h3> Tools | Test </h3>
-                    <ul>
-                        {
-                            tools.map(info => (
-                                <li key={info.id}>
-                                    <div className="outside">
-                                        <a href={info.link} rel="noopener noreferrer" target="_blank">
-                                            <div className="inside">
-                                                <img src={info.image} alt={info.title} />
-                                                <p>{info.title}</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-                <div className="mobile">
-                    <h3> Mobile </h3>
-                    <ul>
-                        {
-                            mobile.map(info => (
-                                <li key={info.id}>
-                                    <div className="outside">
-                                        <a href={info.link} rel="noopener noreferrer" target="_blank">
-                                            <div className="inside">
-                                                <img src={info.image} alt={info.title} />
-                                                <p>{info.title}</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-                <div className="front">
-                    <h3> Front-end </h3>
-                    <ul>
-                        {
-                            frontend.map(info => (
-                                <li key={info.id}>
-                                    <div className="outside">
-                                        <a href={info.link} rel="noopener noreferrer" target="_blank">
-                                            <div className="inside">
-                                                <img src={info.image} alt={info.title} />
-                                                <p>{info.title}</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
+                <span onClick={handleToggle} >
+                    {arrowStyle} My Skills...
+                </span>
+                <hr></hr>
 
-                <div className="back">
-                    <h3> Back-end </h3>
-                    <ul>
-                        {
-                            backend.map(info => (
-                                <li key={info.id}>
-                                    <div className="outside">
-                                        <a href={info.link} rel="noopener noreferrer" target="_blank">
-                                            <div className="inside">
-                                                <img src={info.image} alt={info.title} />
-                                                <p>{info.title}</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
+                <div style={style}>
+                    <div className="infra">
+                        <h3> Infrastruture </h3>
+                        <ul>
+                            {
+                                infrastructure.map(info => (
+                                    <li key={info.id}>
+                                        <div className="outside">
+                                            <a href={info.link} rel="noopener noreferrer" target="_blank">
+                                                <div className="inside">
+                                                    <img src={info.image} alt={info.title} />
+                                                    <p>{info.title}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                    <div className="tools">
+                        <h3> Tools | Test </h3>
+                        <ul>
+                            {
+                                tools.map(info => (
+                                    <li key={info.id}>
+                                        <div className="outside">
+                                            <a href={info.link} rel="noopener noreferrer" target="_blank">
+                                                <div className="inside">
+                                                    <img src={info.image} alt={info.title} />
+                                                    <p>{info.title}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                    <div className="mobile">
+                        <h3> Mobile </h3>
+                        <ul>
+                            {
+                                mobile.map(info => (
+                                    <li key={info.id}>
+                                        <div className="outside">
+                                            <a href={info.link} rel="noopener noreferrer" target="_blank">
+                                                <div className="inside">
+                                                    <img src={info.image} alt={info.title} />
+                                                    <p>{info.title}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                    <div className="front" >
+                        <h3> Front-end </h3>
+                        <ul>
+                            {
+                                frontend.map(info => (
+                                    <li key={info.id}>
+                                        <div className="outside">
+                                            <a href={info.link} rel="noopener noreferrer" target="_blank">
+                                                <div className="inside">
+                                                    <img src={info.image} alt={info.title} />
+                                                    <p>{info.title}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
 
-                <div className="back">
-                    <h3> Databases </h3>
-                    <ul>
-                        {
-                            db.map(info => (
-                                <li key={info.id}>
-                                    <div className="outside">
-                                        <a href={info.link} rel="noopener noreferrer" target="_blank">
-                                            <div className="inside">
-                                                <img src={info.image} alt={info.title} />
-                                                <p>{info.title}</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                            ))
-                        }
-                    </ul>
+                    <div className="back" >
+                        <h3> Back-end </h3>
+                        <ul>
+                            {
+                                backend.map(info => (
+                                    <li key={info.id}>
+                                        <div className="outside">
+                                            <a href={info.link} rel="noopener noreferrer" target="_blank">
+                                                <div className="inside">
+                                                    <img src={info.image} alt={info.title} />
+                                                    <p>{info.title}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+
+                    <div className="bd" >
+                        <h3> Databases </h3>
+                        <ul>
+                            {
+                                db.map(info => (
+                                    <li key={info.id}>
+                                        <div className="outside">
+                                            <a href={info.link} rel="noopener noreferrer" target="_blank">
+                                                <div className="inside">
+                                                    <img src={info.image} alt={info.title} />
+                                                    <p>{info.title}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
