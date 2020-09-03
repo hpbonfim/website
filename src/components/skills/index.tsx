@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import './styles.css'
+/*
 import backendJson from './back.json'
 import frontendJson from './front.json'
 import infraJson from './infra.json'
 import toolsJson from './tools.json'
 import mobileJson from './mobile.json'
 import dbJson from './db.json'
+*/
 
 interface Skills {
     id: number
@@ -15,24 +17,27 @@ interface Skills {
 }
 
 const Skills = () => {
-
+    /*
     const [db, setDb] = useState<Skills[]>([])
     const [tools, setTools] = useState<Skills[]>([])
     const [mobile, setMobile] = useState<Skills[]>([])
     const [backend, setBackend] = useState<Skills[]>([])
     const [frontend, setFrontend] = useState<Skills[]>([])
     const [infrastructure, setInfrastructure] = useState<Skills[]>([])
+    */
     const [arrowStyle, setArrowStyle] = useState<string>("⇉")
     const [isToggled, setToggle] = useState<Boolean>(false)
     const [view, setView] = useState<string>("none")
 
     useEffect(() => {
+        /*
         setDb(dbJson)
         setTools(toolsJson)
         setMobile(mobileJson)
         setBackend(backendJson)
         setFrontend(frontendJson)
         setInfrastructure(infraJson)
+        */
         changeStyle(isToggled)
     }, [isToggled])
 
