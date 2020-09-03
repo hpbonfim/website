@@ -6,8 +6,8 @@ body {
   height: 100vh;
 }
 
-html { 
-  background: url('./assets/background.jpg') no-repeat center center fixed; 
+html {
+  background: url('./assets/background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,7 +21,7 @@ html {
   /* IE 10+ */
   -o-user-select: none;
   user-select: none;
- scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -52,6 +52,30 @@ html {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: darkgrey;
+  background-color: darkgrey;
   outline: 1px solid slategrey;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 2.0em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+h4 {
+  font-size: 1.6em;
+}
+
+h5 {
+  font-size: 1.4em;
+}
+
+p {
+  font-size: 1.2em;
 }

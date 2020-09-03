@@ -64,6 +64,10 @@ const Skills = () => {
                 <hr></hr>
 
                 <div style={style}>
+                    <h3>Em manutenção</h3>
+                    {
+                        /*
+                        
                     <div className="infra">
                         <h3> Infrastruture </h3>
                         <ul>
@@ -180,6 +184,9 @@ const Skills = () => {
                             }
                         </ul>
                     </div>
+
+                        */
+                    }
                 </div>
             </div>
         </div>
