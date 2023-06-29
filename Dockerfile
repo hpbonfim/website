@@ -1,5 +1,5 @@
 # Stage 1: Build
-FROM node:slim AS build
+FROM node:current-slim AS build
 
 WORKDIR /website
 
@@ -14,7 +14,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Serve build artifacts with Nginx
-FROM nginx:slim
+FROM nginx:alpine-slim
 
 # Copy built assets from build stage
 COPY --from=build /website/dist /usr/share/nginx/html
