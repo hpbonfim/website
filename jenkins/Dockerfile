@@ -21,6 +21,9 @@ RUN echo "deb [arch=$(dpkg --print-architecture) \
 
 RUN apt-get update && apt-get install -y docker-ce-cli
 
+# Copy the Groovy script that creates the admin user
+COPY default-user.groovy /usr/share/jenkins/ref/init.groovy.d/
+
 # Switch back to the jenkins user
 USER jenkins
 
@@ -28,5 +31,3 @@ RUN jenkins-plugin-cli --plugins "blueocean docker-workflow"
 
 # Start Jenkins
 ENTRYPOINT ["/usr/local/bin/jenkins.sh"]
-
-
