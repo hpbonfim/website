@@ -27,7 +27,11 @@ COPY default-user.groovy /usr/share/jenkins/ref/init.groovy.d/
 # Switch back to the jenkins user
 USER jenkins
 
-RUN jenkins-plugin-cli --plugins "blueocean docker-workflow"
+# Install Jenkins plugins (optional)
+# RUN jenkins-plugin-cli --plugins "blueocean docker-workflow"
+
+# Expose port 8080 (default port for Jenkins) (also default port on GCP, enable if nedded)
+# EXPOSE 8080
 
 # Start Jenkins
 ENTRYPOINT ["/usr/local/bin/jenkins.sh"]
