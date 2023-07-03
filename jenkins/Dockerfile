@@ -28,7 +28,7 @@ COPY default-user.groovy /usr/share/jenkins/ref/init.groovy.d/
 USER jenkins
 
 # Install Jenkins plugins (optional)
-# RUN jenkins-plugin-cli --plugins "blueocean docker-workflow"
+RUN jenkins-plugin-cli --plugins "blueocean docker-workflow"
 
 # Expose port 8080 (default port for Jenkins) (also default port on GCP, enable if nedded)
 # EXPOSE 8080
