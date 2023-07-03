@@ -22,7 +22,7 @@ RUN echo "deb [arch=$(dpkg --print-architecture) \
 RUN apt-get update && apt-get install -y docker-ce-cli
 
 # Copy the Groovy script that creates the admin user (optional)
-# COPY default-user.groovy /usr/share/jenkins/ref/init.groovy.d/
+COPY default-user.groovy /usr/share/jenkins/ref/init.groovy.d/
 
 # Switch back to the jenkins user
 USER jenkins
