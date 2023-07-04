@@ -21,7 +21,7 @@ pipeline {
         stage('Build') { 
             steps {
                 echo 'Building test...'
-                sh 'node -v && npm -v && npm install' 
+                sh 'npm install' 
             }
         }
     }
