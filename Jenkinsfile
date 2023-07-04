@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:lts-bullseye-slim'
+            args '-u root'
         }
     }
 
@@ -19,6 +20,7 @@ pipeline {
 
         stage('Build') { 
             steps {
+                echo 'Building test...'
                 sh 'node -v && npm -v && npm install' 
             }
         }
