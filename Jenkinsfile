@@ -2,7 +2,6 @@ pipeline {
     agent {
         docker {
             image 'node:lts-bullseye-slim'
-            args '-u root -p 3000:3000'
         }
     }
 
@@ -35,11 +34,20 @@ pipeline {
 
         stage('Preflight') {
             steps {
-                sh 'chmod +x ./jenkins/scripts/deliver.sh'
-                sh './jenkins/scripts/deliver.sh'
-                input message: 'Can proceed? (Click "Proceed" to continue)'
-                sh 'chmod +x ./jenkins/scripts/kill.sh'
-                sh './jenkins/scripts/kill.sh'
+                input message: 'Deploy to firebase? (Click "Proceed" to continue)'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Installing Firebase CLI...'
+                sh 'npm install -g firebase-tools'
+                echo 'Building app...'
+                sh 'npm run build'
+                echo 'Deploying to Firebase...'
+                withCredentials([usernamePassword(credentialsId: 'firebaseCredentials', usernameVariable: 'FIREBASE_TOKEN', passwordVariable: 'FIREBASE_TOKEN')]) {
+                    sh 'firebase deploy --only hosting --token $FIREBASE_TOKEN'
+                }
             }
         }
     }
