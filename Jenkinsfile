@@ -25,6 +25,14 @@ pipeline {
             }
         }
 
+        stage('Test') {
+            steps {
+                echo 'Lint code...'
+                sh 'chmod +x ./jenkins/scripts/test.sh'
+                sh './jenkins/scripts/test.sh'
+            }
+        }
+
         stage('Preflight') {
             steps {
                 sh 'chmod +x ./jenkins/scripts/deliver.sh'
