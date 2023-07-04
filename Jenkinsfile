@@ -42,7 +42,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Installing Firebase CLI...'
-                sh 'npm install -g firebase-tools'
+                sh 'npm install -g firebase-tools && firebase experiments:enable webframeworks'
                 echo 'Building app...'
                 sh 'npm run build'
                 echo 'Deploying to Firebase...'
