@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:lts-bullseye-slim'
-            args '-u root'
+            args '-u root -p 3000:3000'
         }
     }
 
@@ -20,8 +20,16 @@ pipeline {
 
         stage('Build') { 
             steps {
-                echo 'Building test...'
+                echo 'Install dependencies...'
                 sh 'npm install' 
+            }
+        }
+
+        stage('Preflight') {
+            steps {
+                sh './jenkins/scripts/deliver.sh'
+                input message: 'Can proceed? (Click "Proceed" to continue)'
+                sh './jenkins/scripts/kill.sh'
             }
         }
     }
