@@ -27,8 +27,10 @@ pipeline {
 
         stage('Preflight') {
             steps {
+                sh 'chmod +x ./jenkins/scripts/deliver.sh'
                 sh './jenkins/scripts/deliver.sh'
                 input message: 'Can proceed? (Click "Proceed" to continue)'
+                sh 'chmod +x ./jenkins/scripts/kill.sh'
                 sh './jenkins/scripts/kill.sh'
             }
         }
