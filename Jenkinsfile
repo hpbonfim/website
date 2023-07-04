@@ -20,7 +20,7 @@ pipeline {
 
         stage('Build') { 
             steps {
-                sh 'node -v && npm -v && npm install' 
+                sh 'node -v && npm -v && npm install --global' 
             }
         }
     }
