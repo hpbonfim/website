@@ -45,8 +45,8 @@ pipeline {
                 echo 'Building app...'
                 sh 'npm run build'
                 echo 'Deploying to Firebase...'
-                withCredentials([usernamePassword(credentialsId: 'firebaseCredentials', usernameVariable: 'FIREBASE_TOKEN', passwordVariable: 'FIREBASE_TOKEN')]) {
-                    sh 'firebase deploy --only hosting --token $FIREBASE_TOKEN'
+                withCredentials([string(credentialsId: 'firebase-deployment-token', variable: 'FIREBASE_TOKEN')]) {
+                  sh 'firebase deploy --only hosting --token $FIREBASE_TOKEN'
                 }
             }
         }
