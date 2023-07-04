@@ -1,8 +1,7 @@
 pipeline {
     agent {
-        dockerContainer {
-            image 'node:lts-bullseye-slim' 
-            args '-p 3000:3000' 
+        docker {
+            image 'node:lts-bullseye-slim'
         }
     }
 
@@ -20,7 +19,7 @@ pipeline {
 
         stage('Build') { 
             steps {
-                sh 'node -v && npm -v && npm install --global' 
+                sh 'node -v && npm -v && npm install' 
             }
         }
     }
