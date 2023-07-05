@@ -10,7 +10,7 @@ services:
 
   jenkins:
     build:
-      context: ./jenkins
+      context: .
       dockerfile: Dockerfile
     ports:
       - 8080:8080
