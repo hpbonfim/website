@@ -1,23 +1,25 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:lts-bullseye-slim'
-            args '-u root'
-        }
-    }
-
+    agent none
+    
     options {
         // This is required if you want to clean before build
         skipDefaultCheckout(true)
     }
 
     environment {
+        // This is for the Docker image (pending)
         IMAGE_NAME = 'hpbonfim/website'
         IMAGE_TAG = 'v0.1'
     }
 
     stages {
         stage('Wipe Out Workspace') {
+            agent {
+                docker {
+                    image 'node:lts-bullseye-slim'
+                    args '-u root'
+                }
+            }
             steps {
                 cleanWs()
                 checkout scm
@@ -26,6 +28,12 @@ pipeline {
         }
 
         stage('Build') { 
+            agent {
+                docker {
+                    image 'node:lts-bullseye-slim'
+                    args '-u root'
+                }
+            }
             steps {
                 echo 'Install dependencies...'
                 sh 'npm install' 
@@ -33,6 +41,12 @@ pipeline {
         }
 
         stage('Test') {
+            agent {
+                docker {
+                    image 'node:lts-bullseye-slim'
+                    args '-u root'
+                }
+            }
             steps {
                 echo 'Lint code...'
                 sh 'npm install --save-dev cross-env'
@@ -41,12 +55,19 @@ pipeline {
         }
 
         stage('Confirm') {
+            agent none
             steps {
-                input message: 'Deploy to firebase? (Click "Proceed" to continue)'
+                input message: 'Deploy to Firebase? (Click "Proceed" to continue)'
             }
         }
 
         stage('Deploy to Firebase') {
+            agent {
+                docker {
+                    image 'node:lts-bullseye-slim'
+                    args '-u root'
+                }
+            }
             steps {
                 echo 'Installing Firebase CLI...'
                 sh 'npm install -g firebase-tools && firebase experiments:enable webframeworks'
