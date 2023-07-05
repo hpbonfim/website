@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import alienImage from './assets/alien_cloud.png'
+import alienImage from '/alien_cloud.png'
 import './App.css'
 
 function App() {
