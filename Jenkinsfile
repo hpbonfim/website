@@ -28,18 +28,18 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Lint code...'
-                sh 'chmod +x ./jenkins/scripts/test.sh'
-                sh './jenkins/scripts/test.sh'
+                sh 'npm install --save-dev cross-env'
+                sh 'npm run lint'
             }
         }
 
-        stage('Preflight') {
+        stage('Confirm') {
             steps {
                 input message: 'Deploy to firebase? (Click "Proceed" to continue)'
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy to Firebase') {
             steps {
                 echo 'Installing Firebase CLI...'
                 sh 'npm install -g firebase-tools && firebase experiments:enable webframeworks'
