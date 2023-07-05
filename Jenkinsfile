@@ -6,12 +6,24 @@ pipeline {
         }
     }
 
+    options {
+        // This is required if you want to clean before build
+        skipDefaultCheckout(true)
+    }
+
     environment {
         IMAGE_NAME = 'hpbonfim/website'
         IMAGE_TAG = 'v0.1'
     }
 
     stages {
+        stage('Wipe Out Workspace') {
+            steps {
+                cleanWs()
+                checkout scm
+                echo "Start ${env.JOB_NAME}..."
+            }
+        }
 
         stage('Build') { 
             steps {
