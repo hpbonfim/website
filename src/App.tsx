@@ -9,7 +9,7 @@ function App() {
     <>
       <div>
         <a href="https://hpbonfim.web.app/" target="_blank">
-          <img src={alienImage} className="logo" alt="React logo" />
+          <img src={alienImage} className="logo" alt="Alien logo" />
         </a>
       </div>
       <h1>Hello World</h1>
