@@ -1,5 +1,5 @@
 # Stage 1: Build
-FROM node:current-slim AS build
+FROM node:lts-slim AS build
 
 WORKDIR /website
 
