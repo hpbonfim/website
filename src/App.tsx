@@ -15,7 +15,7 @@ function App() {
       <h1>Hello World</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          clicked {count} times!
+          clicked {count} times
         </button>
       </div>
       <code className="read-the-docs">
