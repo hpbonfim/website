@@ -1,4 +1,4 @@
-name: Deploy to Firebase Preview Hosting on PR
+name: Deploy Staging to Firebase Preview Hosting on PR
 'on':
   pull_request:
     branches:
