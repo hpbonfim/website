@@ -19,7 +19,7 @@ function App() {
         </button>
       </div>
       <code className="read-the-docs">
-        Click <a href='https://hpbonfim.web.app/' target='_blank'>here</a> to learn more
+        <a href='https://hpbonfim.web.app/' target='_blank'>Click here</a> to learn more
       </code>
     </>
   )
