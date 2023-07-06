@@ -9,17 +9,17 @@ function App() {
     <>
       <div>
         <a href="https://hpbonfim.web.app/" target="_blank">
-          <img src={alienImage} className="logo" alt="React logo" />
+          <img src={alienImage} className="logo" alt="Alien logo" />
         </a>
       </div>
       <h1>Hello World</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          clicked {count} times!
         </button>
       </div>
       <code className="read-the-docs">
-        Click <a href='https://hpbonfim.web.app/' target='_blank'>here</a> to learn more
+        <a href='https://hpbonfim.web.app/' target='_blank'>Click here</a> to learn more
       </code>
     </>
   )
