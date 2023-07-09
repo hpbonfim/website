@@ -14,8 +14,8 @@ function App() {
       </div>
       <h1>Hello World</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          clicked {count} times!
+        <button onClick={() => setCount((count) => count + 1)} id='clicked_event'>
+          clicked {count} times
         </button>
       </div>
       <code className="read-the-docs">
