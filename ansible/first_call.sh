@@ -1,4 +1,5 @@
 #!/bin/bash
+set -Eeuo pipefail
 
 # Get the directory of the script
 SCRIPT_DIR=$(dirname "$0")
@@ -33,7 +34,7 @@ function valid_ip() {
 function copy_public_key() {
     local ip=$1
     # SSH to the server and copy the public key
-    ssh -i "$PRIV_KEY_PATH" -t "$SERVER_USER@$ip" "echo \"$PUBLIC_KEY_VALUE\" >> ~/.ssh/authorized_keys"
+    ssh -i "$PRIV_KEY_PATH" -o ConnectTimeout=10 -t "$SERVER_USER@$ip" "echo \"$PUBLIC_KEY_VALUE\" >> ~/.ssh/authorized_keys"
 }
 
 # Function to certify that the SSH public key is authorized
