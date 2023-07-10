@@ -1,4 +1,3 @@
-# Docker
 # Stage 1: Build
 FROM node:lts-slim AS build
 
@@ -21,10 +20,7 @@ FROM nginx:alpine-slim
 COPY --from=build /website/dist /usr/share/nginx/html
 
 # Copy nginx configuration
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
-
-# Copy MIME types configuration
-COPY nginx/mime.types /etc/nginx/mime.types
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose port 80
 EXPOSE 80
