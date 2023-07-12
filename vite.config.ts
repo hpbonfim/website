@@ -1,9 +1,14 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import { configDefaults } from 'vitest/dist/config.js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  test: {
+    exclude: [...configDefaults.exclude, 'ansible/*', '.github', 'dev-dist', 'jenkins', 'nginx', '.firebase'],
+  },
   plugins: [
     react(),
     VitePWA({
@@ -22,7 +27,7 @@ export default defineConfig({
       manifest: {
         name: "Henrique Bonfim",
         short_name: "Henrique",
-        description: "Eu amo meu momoreco",
+        description: "Be my guest",
         theme_color: "#568f30",
         background_color: "#130c13",
         display: "standalone",
