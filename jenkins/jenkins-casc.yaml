@@ -1,0 +1,22 @@
+jenkins:
+  clouds:
+    - kubernetes:
+        name: "kubernetes"
+        serverUrl: "https://kubernetes.default"
+        jenkinsUrl: "http://jenkins.default.svc.cluster.local:8080"
+        jenkinsTunnel: "jenkins-agent.default.svc.cluster.local:50000"
+        containerCapStr: "10"
+        templates:
+          - label: "jnlp"
+            name: "jnlp"
+            idleMinutes: 1
+            activeDeadlineMinutes: 5
+            volumes:
+              - emptyDirVolume:
+                  mountPath: "/home/jenkins/agent"
+            containers:
+              - name: "jnlp"
+                image: "jenkins/inbound-agent:4.3-4"
+                alwaysPullImage: true
+                command: "jenkins-agent"
+                args: "${computer.jnlpmac} ${computer.name}"
