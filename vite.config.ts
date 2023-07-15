@@ -20,42 +20,56 @@ export default defineConfig({
       devOptions: {
         enabled: true
       },
-      includeAssets: [
-        'favicon.ico',
-        'apple-touch-icon.png'
-      ],
       manifest: {
         name: "Henrique Bonfim",
         short_name: "Henrique",
         description: "Be my guest",
-        theme_color: "#568f30",
-        background_color: "#130c13",
+        theme_color: "#707070",
+        background_color: "#707070",
         display: "standalone",
         orientation: "portrait",
         scope: "/",
         start_url: "/",
         icons: [
           {
-            src: 'pwa-64x64.png',
-            sizes: '64x64',
+            src: 'icon-72x72.png',
+            sizes: '72x72',
             type: 'image/png'
           },
           {
-            src: 'pwa-192x192.png',
+            src: 'icon-96x96.png',
+            sizes: '96x96',
+            type: 'image/png'
+          },
+          {
+            src: 'icon-128x128.png',
+            sizes: '128x128',
+            type: 'image/png'
+          },
+          {
+            src: 'icon-144x144.png',
+            sizes: '144x144',
+            type: 'image/png'
+          },
+          {
+            src: 'icon-152x152.png',
+            sizes: '152x152',
+            type: 'image/png'
+          },
+          {
+            src: 'icon-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any'
+            src: 'icon-384x384.png',
+            sizes: '384x384',
+            type: 'image/png'
           },
           {
-            src: 'maskable-icon-512x512.png',
+            src: 'icon-512x512.png',
             sizes: '512x512',
-            type: 'image/png',
-            purpose: 'maskable'
+            type: 'image/png'
           }
         ]
       }
