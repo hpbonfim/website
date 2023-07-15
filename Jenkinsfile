@@ -1,83 +1,95 @@
 pipeline {
-    agent none
-    
-    options {
-        // This is required if you want to clean before build
-        skipDefaultCheckout(true)
+  agent any
+
+  options {
+    // This is required if you want to clean before build
+    skipDefaultCheckout(true)
+  }
+
+  environment {
+    // This is for the Docker image name and tag
+    IMAGE_NAME = 'hpbonfim/website'
+    IMAGE_TAG = 'v1.0'
+    STAGING_IMAGE_TAG = 'v1.0-beta'
+  }
+
+  stages {
+    stage('Wipe Out Workspace') {
+      agent {
+        docker {
+          image 'node:lts-bullseye-slim'
+          args '-u root'
+        }
+      }
+      steps {
+        cleanWs()
+        checkout scm
+        echo "Start ${env.JOB_NAME}..."
+      }
     }
 
-    environment {
-        // This is for the Docker image (pending)
-        IMAGE_NAME = 'hpbonfim/website'
-        IMAGE_TAG = 'v0.1'
+    stage('Build') { 
+      agent {
+        docker {
+          image 'node:lts-bullseye-slim'
+          args '-u root'
+        }
+      }
+      steps {
+        echo 'Install dependencies...'
+        sh 'npm install' 
+      }
     }
 
-    stages {
-        stage('Wipe Out Workspace') {
-            agent {
-                docker {
-                    image 'node:lts-bullseye-slim'
-                    args '-u root'
-                }
-            }
-            steps {
-                cleanWs()
-                checkout scm
-                echo "Start ${env.JOB_NAME}..."
-            }
+    stage('Test') {
+      agent {
+        docker {
+          image 'node:lts-bullseye-slim'
+          args '-u root'
         }
-
-        stage('Build') { 
-            agent {
-                docker {
-                    image 'node:lts-bullseye-slim'
-                    args '-u root'
-                }
-            }
-            steps {
-                echo 'Install dependencies...'
-                sh 'npm install' 
-            }
-        }
-
-        stage('Test') {
-            agent {
-                docker {
-                    image 'node:lts-bullseye-slim'
-                    args '-u root'
-                }
-            }
-            steps {
-                echo 'Lint code...'
-                sh 'npm install --save-dev cross-env'
-                sh 'npm run lint'
-            }
-        }
-
-        stage('Confirm') {
-            agent none
-            steps {
-                input message: 'Deploy to Firebase? (Click "Proceed" to continue)'
-            }
-        }
-
-        stage('Deploy to Firebase') {
-            agent {
-                docker {
-                    image 'node:lts-bullseye-slim'
-                    args '-u root'
-                }
-            }
-            steps {
-                echo 'Installing Firebase CLI...'
-                sh 'npm install -g firebase-tools && firebase experiments:enable webframeworks'
-                echo 'Building app...'
-                sh 'npm run build'
-                echo 'Deploying to Firebase...'
-                withCredentials([string(credentialsId: 'firebase-deployment-token', variable: 'FIREBASE_TOKEN')]) {
-                  sh 'firebase deploy --only hosting --token $FIREBASE_TOKEN'
-                }
-            }
-        }
+      }
+      steps {
+        echo 'Lint code...'
+        sh 'npm install --save-dev cross-env'
+        sh 'npm run lint'
+        echo 'Test code...'
+        sh 'npm run test'
+      }
     }
+
+    stage('Confirm') {
+      agent none
+      when {
+        anyOf {
+          branch 'staging'
+          branch 'production'
+        }
+      }
+      steps {
+        input message: 'Deploy to Dockerhub? (Click "Proceed" to continue)'
+      }
+    }
+
+    stage('Deploy Beta to Docker Hub') {
+      agent any
+      when {
+        branch 'staging'
+      }
+      steps {
+        sh 'docker build -t ${IMAGE_NAME}:${STAGING_IMAGE_TAG} .'
+        sh 'docker push ${IMAGE_NAME}:${STAGING_IMAGE_TAG}'
+      }
+    }
+
+    stage('Deploy to Docker Hub') {
+      agent any
+      when {
+        branch 'production'
+      }
+      steps {
+        sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
+        sh 'docker push ${IMAGE_NAME}:${IMAGE_TAG}'
+      }
+    }
+  }
 }
