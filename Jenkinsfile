@@ -7,9 +7,10 @@ pipeline {
   }
 
   environment {
-    // This is for the Docker image (pending)
+    // This is for the Docker image name and tag
     IMAGE_NAME = 'hpbonfim/website'
-    IMAGE_TAG = 'v0.1'
+    IMAGE_TAG = 'v1.0'
+    STAGING_IMAGE_TAG = 'v1.0-beta'
   }
 
   stages {
@@ -51,21 +52,40 @@ pipeline {
         echo 'Lint code...'
         sh 'npm install --save-dev cross-env'
         sh 'npm run lint'
+        echo 'Test code...'
+        sh 'npm run test'
       }
     }
 
     stage('Confirm') {
       agent none
+      when {
+        anyOf {
+          branch 'staging'
+          branch 'production'
+        }
+      }
       steps {
         input message: 'Deploy to Dockerhub? (Click "Proceed" to continue)'
       }
     }
 
+    stage('Deploy Beta to Docker Hub') {
+      agent any
+      when {
+        branch 'staging'
+      }
+      steps {
+        sh 'docker build -t ${IMAGE_NAME}:${STAGING_IMAGE_TAG} .'
+        sh 'docker push ${IMAGE_NAME}:${STAGING_IMAGE_TAG}'
+      }
+    }
+
     stage('Deploy to Docker Hub') {
+      agent any
       when {
         branch 'production'
       }
-      agent any
       steps {
         sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
         sh 'docker push ${IMAGE_NAME}:${IMAGE_TAG}'
