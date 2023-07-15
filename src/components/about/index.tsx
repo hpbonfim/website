@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
 import { SocialLinkProps } from "./types";
 import "./styles.css";
-
-const PROFILE_IMAGE_URI = "https://avatars3.githubusercontent.com/u/40275173?s=460&u=fbc8036afb33b27a0758c0d091959cdc31676f66&v=4";
-const SOCIAL_LINKS = [
-  { url: "https://hub.docker.com/u/hpbonfim", className: "dockerhub", id: "clicked_dockerhub", icon: "/docker.png" },
-  { url: "https://github.com/hpbonfim", className: "github", id: "clicked_github", icon: "/github.png" },
-  { url: "https://gitlab.com/hpbonfim", className: "gitlab", id: "clicked_gitlab", icon: "/gitlab.png" },
-  { url: "https://linkedin.com/in/hpbonfim", className: "linkedin", id: "clicked_linkedin", icon: "/linkedin.png" },
-  { url: "https://instagram.com/hpbonfim", className: "instagram", id: "clicked_instagram", icon: "/instagram.png" }
-];
+import { PROFILE_IMAGE_URI, SOCIAL_LINKS } from "../../constant";
 
 const SocialLink = ({ url, className, id, icon }: SocialLinkProps) => (
   <a href={url} rel="noopener noreferrer" target="_blank" className={className} id={id}>
