@@ -97,27 +97,32 @@ blockquote:nth-of-type(even) footer:after {
 .instagram {
   background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
   border-radius: 4px;
+  border-color: transparent;
 }
 
 .gitlab {
   background: #ff770060;
   border-radius: 4px;
+  border-color: transparent;
 }
 
 
 .github {
   background: #242424;
   border-radius: 4px;
+  border-color: transparent;
 }
 
 .linkedin {
   background: #0077b5;
   border-radius: 4px;
+  border-color: transparent;
 }
 
 .dockerhub {
   background: #064c72;
   border-radius: 4px;
+  border-color: transparent;
 }
 
 /* 
