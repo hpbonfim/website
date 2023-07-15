@@ -5,7 +5,7 @@ import { PROFILE_IMAGE_URI, SOCIAL_LINKS } from "../../constant";
 
 const SocialLink = ({ url, className, id, icon }: SocialLinkProps) => (
   <a href={url} rel="noopener noreferrer" target="_blank" className={className} id={id}>
-    <img src={icon} alt={className} width={'30rem'} />
+    <img src={icon} alt={className} width={'30rem'} height={'30rem'} />
   </a>
 );
 
@@ -19,7 +19,7 @@ export const About = () => {
         <h4>Be my guest...</h4>
 
         <a id="clicked_photo" href={PROFILE_IMAGE_URI} target="_blank">
-          <img className="perfil" src={PROFILE_IMAGE_URI} alt="Minha Foto" />
+          <img className="perfil" src={PROFILE_IMAGE_URI} alt="Minha Foto" width={100} height={100} />
         </a>
 
         <p>
