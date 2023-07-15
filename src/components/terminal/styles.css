@@ -40,7 +40,7 @@
 }
 
 .terminal .bash {
-  color: skyblue;
+  color: #57AB5A;
   -webkit-animation: type .5s 1s steps(20, end) forwards;
   -moz-animation: type .5s 1s steps(20, end) forwards;
   -o-animation: type .5s 1s steps(20, end) forwards;
@@ -57,10 +57,10 @@
 
 .terminal .message {
   color: #fff;
-  -webkit-animation: type .5s 3s steps(20, end) forwards;
-  -moz-animation: type .5s 3s steps(20, end) forwards;
-  -o-animation: type .5s 3s steps(20, end) forwards;
-  animation: type .5s 3s steps(20, end) forwards;
+  -webkit-animation: type .5s 2s steps(20, end) forwards;
+  -moz-animation: type .5s 2s steps(20, end) forwards;
+  -o-animation: type .5s 2s steps(20, end) forwards;
+  animation: type .5s 2s steps(20, end) forwards;
 }
 
 .terminal .message .red-heart {
@@ -70,10 +70,10 @@
 
 .terminal .clock {
   color: #fff;
-  -webkit-animation: type .5s 3.5s steps(20, end) forwards;
-  -moz-animation: type .5s 3.5s steps(20, end) forwards;
-  -o-animation: type .5s 3.5s steps(20, end) forwards;
-  animation: type .5s 3.5s steps(20, end) forwards;
+  -webkit-animation: type .5s 3s steps(20, end) forwards;
+  -moz-animation: type .5s 3s steps(20, end) forwards;
+  -o-animation: type .5s 3s steps(20, end) forwards;
+  animation: type .5s 3s steps(20, end) forwards;
 }
 
 .terminal .clock .white-cloud {

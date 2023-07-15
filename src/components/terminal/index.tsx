@@ -11,7 +11,6 @@ export const Terminal = () => {
   return (
     <div className="terminal">
       <p className="bash">#!/bin/bash
-        <span> echo $MESSAGE</span>
         <span className="cursor">_</span>
       </p>
       <p className="message">
