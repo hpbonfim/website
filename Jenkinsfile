@@ -7,9 +7,8 @@ pipeline {
   }
 
   environment {
-    // This is for the Docker image name and tag
     IMAGE_NAME = 'hpbonfim/website'
-    IMAGE_TAG = 'v1.0'
+    PRODUCTION_IMAGE_TAG = 'v1.0'
     STAGING_IMAGE_TAG = 'v1.0-beta'
     DOCKERHUB_CREDENTIALS = credentials('dockerhub')
   }
@@ -77,6 +76,7 @@ pipeline {
         branch 'staging'
       }
       steps {
+        sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
         sh 'docker build -t ${IMAGE_NAME}:${STAGING_IMAGE_TAG} .'
         sh 'docker push ${IMAGE_NAME}:${STAGING_IMAGE_TAG}'
       }
