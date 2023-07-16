@@ -11,6 +11,7 @@ pipeline {
     IMAGE_NAME = 'hpbonfim/website'
     IMAGE_TAG = 'v1.0'
     STAGING_IMAGE_TAG = 'v1.0-beta'
+    DOCKERHUB_CREDENTIALS = credentials('dockerhub')
   }
 
   stages {
@@ -87,9 +88,15 @@ pipeline {
         branch 'production'
       }
       steps {
+        sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
         sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
         sh 'docker push ${IMAGE_NAME}:${IMAGE_TAG}'
       }
+    }
+  }
+  post {
+    always {
+      sh 'docker logout'
     }
   }
 }
