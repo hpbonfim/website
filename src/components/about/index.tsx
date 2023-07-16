@@ -43,7 +43,7 @@ export const About = () => {
             <li>- Produzir e utilizar softwares de alta produtividade, segurança, desempenho e escalabilidade;</li>
             <li>- Prover as melhores infraestruturas como código em qualquer <i>public/private cloud</i>;</li>
             <li>- Correr sempre atrás das melhores soluções para resolver os problemas; <br /></li>
-            <li>- Buscar bugs em troca de recompensas {small('(buguei o GitHub commitando mais de 10k em alguns anos passados... rsrsrs)')}.</li>
+            <li>- Buscar bugs em troca de recompensas {small('(buguei o GitHub commitando mais de 40k em alguns anos passados... rsrsrs)')}.</li>
           </ul>
         </p>
 
