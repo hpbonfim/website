@@ -33,18 +33,22 @@ export const About = () => {
         </p>
 
         <p>
-          Sou Henrique, tenho {age} anos e sou um explorador incansável do mundo da tecnologia. Sou <strong>DevOps Engineer</strong>, onde sou conhecido por:
+          Sou Henrique, tenho {age} anos e sou um explorador incansável do mundo da tecnologia.
+        </p>
+
+        <p>
+          Trabalho sob os cargos de <strong>Engenheiro de Software / Arquiteto Cloud / Engenheiro DevOps / Engenheiro SRE</strong>, e sou conhecido por:
           <ul style={{ listStyleType: 'none' }}>
             <li>- Desenvolver códigos simples para problemas complexos {small('(a simplicidade é a melhor resposta)')};</li>
-            <li>- Buscando bugs em troca de recompensas {small('(buguei o GitHub commitando mais de 10k em um ano... rsrsrs)')};</li>
-            <li>- Produzir Softwares de alta produtividade, segurança, desempenho e escalabilidade;</li>
-            <li>- Prover as melhores infraestruturas as code em <i>public/private cloud</i>;</li>
-            <li>- Correr sempre das melhores maneiras de fazer as coisas {small('(remendar um balde furado é mais trabalhoso que comprar um novo, pense nisso...)')}. <br /></li>
+            <li>- Produzir e utilizar softwares de alta produtividade, segurança, desempenho e escalabilidade;</li>
+            <li>- Prover as melhores infraestruturas como código em qualquer <i>public/private cloud</i>;</li>
+            <li>- Correr sempre atrás das melhores soluções para resolver os problemas; <br /></li>
+            <li>- Buscar bugs em troca de recompensas {small('(buguei o GitHub commitando mais de 10k em alguns anos passados... rsrsrs)')}.</li>
           </ul>
         </p>
 
         <p>
-          No coração do meu trabalho, você encontrará <strong>DevOps</strong>, <strong>Cloud Architecture</strong> e <strong>SRE</strong>. Estas são a chave para transformar problemas em soluções, para transformar ideias em realidade.
+          No coração do meu trabalho, você encontrará <strong>DevOps</strong>, <strong>Design Patterns</strong> e <strong>Clean Code</strong>. Estas são a chave para transformar problemas em soluções, para transformar ideias em realidade.
         </p>
 
         <p>
