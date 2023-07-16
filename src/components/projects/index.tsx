@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: { project: ProjectData }) => (
 
 export const Projects = () => {
   const [projects, setProjects] = useState<ProjectData[]>([]);
-  const [showProjects, setShowProjects] = useState(false);
+  const [showProjects, setShowProjects] = useState(true);
 
   useEffect(() => {
     setProjects(LIST_PROJECTS);

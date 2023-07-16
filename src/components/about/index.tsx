@@ -9,37 +9,54 @@ const SocialLink = ({ url, className, id, icon }: SocialLinkProps) => (
   </a>
 );
 
+const small = (text: string) => (<small><i>{text}</i></small>)
+
 export const About = () => {
   const [age, setAge] = useState<number>(0)
   useEffect(() => setAge(new Date(new Date().setTime(Date.parse(Date()) - Date.parse("05/21/1996"))).getFullYear() - 1970), [])
 
   return (
     <div className="container">
-      <div className="story">
-        <h4>Be my guest...</h4>
+      <main className="story">
+        <h4>BE MY GUEST...</h4>
 
         <a id="clicked_photo" href={PROFILE_IMAGE_URI} target="_blank">
           <img className="perfil" src={PROFILE_IMAGE_URI} alt="Minha Foto" width={100} height={100} />
         </a>
 
         <p>
-          Bem-vindo ao meu universo, um lugar onde a <strong>Internet</strong> é o espaço infinito e o <strong>código</strong> é a linguagem que nos permite navegar dentre mundos misteriosos. E como desenvolvedor de software, é meu dever navegar nesse vasto digital, descobrindo coisas novas, construindo pontes e criando novos mundos.
+          Bem-vind@s ao meu universo, um lugar onde as infinitas linhas de código são responsáveis por nos permitir navegar dentre mundos, misteriosos. E como desenvolvedor de software há mais de 10 anos, é meu dever guiá-los nessa jornada, desafiando o vasto mundo digital, descobrindo novas possibilidades, construindo novas pontes e por fim, a solução ideal.
         </p>
 
         <p>
-          Sou Henrique, tenho {age} anos e sou um explorador incansável do mundo da tecnologia. Desde a minha infância, sempre fui fascinado por como as coisas funcionam, uma curiosidade que me levou a desmontar brinquedos e, eventualmente, a montar linhas de código.
+          Quando criança, minha curiosidade sobre as coisas me fazia fazer diversas artimanhas, uma delas era quebrar meus carrinhos para descobrir como funcionava e montava tudo novamente para minha mãe não descobrir {small('(rsrsrs)')} e essa curiosidade, eventualmente, se faz presente nas linhas de código que escrevo diariamente.
         </p>
 
         <p>
-          No coração do meu trabalho, você encontrará <strong>DevOps</strong>, <strong>Cloud Architecture</strong> e <strong>SRE</strong>. Estas são as ferramentas que uso para transformar problemas em soluções, para transformar ideias em realidade.
+          Sou Henrique, tenho {age} anos e sou um explorador incansável do mundo da tecnologia.
         </p>
 
         <p>
-          Sou um orgulhoso membro da comunidade <strong>open-source</strong>, um espaço onde a colaboração e a inovação andam de mãos dadas. Aqui, eu contribuo para projetos, aprendo com os melhores e participo de hackatons, sempre buscando expandir meus horizontes e aprimorar minhas habilidades.
+          Trabalho sob os cargos de <strong>Engenheiro de Software / Arquiteto Cloud / Engenheiro DevOps / Engenheiro SRE</strong>, e sou conhecido por:
+          <ul style={{ listStyleType: 'none' }}>
+            <li>- Desenvolver códigos simples para problemas complexos {small('(a simplicidade é a melhor resposta)')};</li>
+            <li>- Produzir e utilizar softwares de alta produtividade, segurança, desempenho e escalabilidade;</li>
+            <li>- Prover as melhores infraestruturas como código em qualquer <i>public/private cloud</i>;</li>
+            <li>- Correr sempre atrás das melhores soluções para resolver os problemas; <br /></li>
+            <li>- Buscar bugs em troca de recompensas {small('(buguei o GitHub commitando mais de 40k em alguns anos passados... rsrsrs)')}.</li>
+          </ul>
         </p>
 
         <p>
-          Acredito que o conhecimento é como uma chama: quanto mais você compartilha, mais ela se espalha. Então, junte-se a mim nesta jornada de aprendizado e descoberta, e vamos iluminar o mundo da tecnologia juntos.
+          No coração do meu trabalho, você encontrará <strong>DevOps</strong>, <strong>Design Patterns</strong> e <strong>Clean Code</strong>. Estas são a chave para transformar problemas em soluções, para transformar ideias em realidade.
+        </p>
+
+        <p>
+          Sou um orgulhoso membro da comunidade <strong>open-source</strong>, um espaço onde a colaboração e a inovação andam de mãos dadas. Aqui, eu contribuo para projetos, aprendo com os melhores e participo de hackatons, sempre buscando expandir meus horizontes e aprimorar minhas habilidades. {small('(inclusive, já ganhei um evento Hackathon, mais isso é história para outro momento...)')}
+        </p>
+
+        <p>
+          Acredito que o conhecimento é como uma chama: quanto mais você compartilha, mais ela se espalha. Então, vamos juntos nesta jornada de aprendizado e descoberta, vamos iluminar o mundo, vamos explorar a tecnologia, juntos!
         </p>
 
         <blockquote className="quote">
@@ -54,7 +71,7 @@ export const About = () => {
             <SocialLink key={link.className} {...link} />
           ))}
         </div>
-      </div>
+      </main>
     </div>
   )
 
