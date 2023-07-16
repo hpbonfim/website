@@ -29,9 +29,9 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="https://github.com/hpbonfim/website#readme" />
   </a>
   </p>
-  
+
   <p align="center">
-    <a href="https://hp-bonfim.web.app">
+    <a href="https://henriquebonfim.web.app">
         <img src="https://opengraph.githubassets.com/cf9f1db04b6e4e2b7a984902d69b889f717d09cb94b8b4296ffffc16d0c73120/hpbonfim/website" width="80%" />
     </a>
 </p>
