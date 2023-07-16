@@ -38,14 +38,15 @@ export const About = () => {
 
         <p>
           Trabalho sob os cargos de <strong>Engenheiro de Software / Arquiteto Cloud / Engenheiro DevOps / Engenheiro SRE</strong>, e sou conhecido por:
-          <ul style={{ listStyleType: 'none' }}>
-            <li>- Desenvolver códigos simples para problemas complexos {small('(a simplicidade é a melhor resposta)')};</li>
-            <li>- Produzir e utilizar softwares de alta produtividade, segurança, desempenho e escalabilidade;</li>
-            <li>- Prover as melhores infraestruturas como código em qualquer <i>public/private cloud</i>;</li>
-            <li>- Correr sempre atrás das melhores soluções para resolver os problemas; <br /></li>
-            <li>- Buscar bugs em troca de recompensas {small('(buguei o GitHub commitando mais de 40k em alguns anos passados... rsrsrs)')}.</li>
-          </ul>
         </p>
+
+        <ul style={{ listStyleType: 'none' }}>
+          <li>- Desenvolver códigos simples para problemas complexos {small('(a simplicidade é a melhor resposta)')};</li>
+          <li>- Produzir e utilizar softwares de alta produtividade, segurança, desempenho e escalabilidade;</li>
+          <li>- Prover as melhores infraestruturas como código em qualquer <i>public/private cloud</i>;</li>
+          <li>- Correr sempre atrás das melhores soluções para resolver os problemas; <br /></li>
+          <li>- Buscar bugs em troca de recompensas {small('(buguei o GitHub commitando mais de 40k em alguns anos passados... rsrsrs)')}.</li>
+        </ul>
 
         <p>
           No coração do meu trabalho, você encontrará <strong>DevOps</strong>, <strong>Design Patterns</strong> e <strong>Clean Code</strong>. Estas são a chave para transformar problemas em soluções, para transformar ideias em realidade.
