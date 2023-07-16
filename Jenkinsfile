@@ -57,19 +57,6 @@ pipeline {
       }
     }
 
-    stage('Confirm') {
-      agent none
-      when {
-        anyOf {
-          branch 'staging'
-          branch 'production'
-        }
-      }
-      steps {
-        input message: 'Deploy to Dockerhub? (Click "Proceed" to continue)'
-      }
-    }
-
     stage('Deploy Beta to Docker Hub') {
       agent any
       when {
