@@ -32,7 +32,6 @@
 
 .terminal .bash {
   color: rgb(6, 142, 206);
-  font-size: 1em;
   -webkit-animation: type .5s 1s steps(20, end) forwards;
   -moz-animation: type .5s 1s steps(20, end) forwards;
   -o-animation: type .5s 1s steps(20, end) forwards;
@@ -42,7 +41,6 @@
 .terminal .message {
   color: #fff;
   margin-top: -1em;
-  font-size: 1em;
   -webkit-animation: type .5s 3s steps(20, end) forwards;
   -moz-animation: type .5s 3s steps(20, end) forwards;
   -o-animation: type .5s 3s steps(20, end) forwards;
