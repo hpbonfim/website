@@ -1,5 +1,22 @@
 .story {
-  color: rgb(255, 255, 255);
+  color: #f1f1f1;
+}
+
+.story p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-transform: none;
+  text-shadow: none;
+  padding-bottom: 5px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.story p strong {
+  color: #bbbbbb;
+}
+
+.story p small {
+  font-style: italic;
 }
 
 .story h4 {
@@ -15,22 +32,12 @@
 }
 
 .highlight {
-  text-decoration: none;
-  color: rgb(255, 206, 90);
+  color: rgb(6, 142, 206) !important;
+  text-shadow: 0.1px 0.1px 10px rgb(100, 100, 100);
 }
 
 a {
-  text-decoration: none;
-  color: rgb(6, 142, 206)
-}
-
-.story p {
-  font-size: 18px;
-  line-height: 1.6;
-  text-transform: none;
-  text-shadow: none;
-  padding-bottom: 5px;
-
+  color: rgb(6, 142, 206);
 }
 
 .story img.perfil {

@@ -5,7 +5,7 @@ export const SOCIAL_LINKS = [
   { url: "https://hub.docker.com/u/hpbonfim", className: "dockerhub", id: "clicked_dockerhub", icon: "/docker.webp" },
   { url: "https://github.com/hpbonfim", className: "github", id: "clicked_github", icon: "/github.webp" },
   { url: "https://gitlab.com/hpbonfim", className: "gitlab", id: "clicked_gitlab", icon: "/gitlab.webp" },
-  { url: "https://linkedin.com/in/hpbonfim", className: "linkedin", id: "clicked_linkedin", icon: "/linkedin.webp" },
+  { url: "https://www.linkedin.com/in/henriquebonfim", className: "linkedin", id: "clicked_linkedin", icon: "/linkedin.webp" },
   { url: "https://instagram.com/hpbonfim", className: "instagram", id: "clicked_instagram", icon: "/instagram.webp" }
 ];
 

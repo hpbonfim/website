@@ -14,7 +14,7 @@ interface ProjectData {
 const ProjectCard = ({ project }: { project: ProjectData }) => (
   <div key={project.id} className="card-list">
     <div className="card-header">
-      <img className="card-header-image" src={project.image} alt={project.title} />
+      <img className="card-header-image" src={project.image} alt={project.title} width={100} height={300} />
     </div>
 
     <div className="card-footer">
