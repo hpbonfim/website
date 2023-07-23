@@ -10,17 +10,26 @@ export const Terminal = () => {
 
   return (
     <div className="terminal">
-      <p className="bash">#!/bin/bash
-        <span className="cursor"></span>
-      </p>
-      <p className="message">
-        &nbsp;Welcome to my universe!
-        <b className="red-heart"> &#x2764;</b>
-      </p>
-      <p className="clock">
-        <b className="white-cloud"> &#9729;</b>
-        &nbsp;{time}
-      </p>
+      <div>
+        <p className="bash">#!/bin/bash</p>
+      </div>
+
+      <div>
+        <p className="clock">
+          &gt;&nbsp;{time}
+        </p>
+      </div>
+
+      <div>
+        <p className="message">
+          &gt; Welcome to my universe!&nbsp;
+          <picture>
+            <span className="white-cloud">&#9729;</span>
+            <img src='logo.webp' width={40} height={40} />
+          </picture>
+        </p>
+      </div>
+
     </div>
   )
 }
