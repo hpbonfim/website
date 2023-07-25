@@ -13,7 +13,7 @@ export const LIST_PROJECTS = [
   {
     "id": 0,
     "title": "ArduEVE",
-    "text": "Projeto feito em NodeJS, VueJS, MongoDB e Arduino, para realizar o feito de controlar um relé eletrônico, utilizado para ativar/desativar a luz e uma porta eletrônica e alguns sensores para transmitir em tempo real a leitura de dados.",
+    "text": "Projeto feito com arquitetura orientada a micro serviços e Docker Swarm, utilizando NodeJS, VueJS, MongoDB, Arduino e outros, para realizar o feito de controlar um relé eletrônico, utilizado para ativar/desativar a luz e uma porta eletrônica e alguns sensores para transmitir em tempo real a leitura de dados.",
     "image": "/ardueve.gif",
     "link": "https://github.com/hpbonfim/ArduEVE",
     "idTag": "clicked_project_ardueve"
@@ -21,14 +21,14 @@ export const LIST_PROJECTS = [
   {
     "id": 1,
     "title": "Pet Porta App",
-    "text": "Projeto feito em NodeJS, VueJS, MongoDB e Arduino, para realizar o feito de controlar um relé eletrônico para abrir a porta do PET SISTEMAS via celular. ",
+    "text": "Projeto feito com arquitetura orientada a micro serviços e Docker Swarm, utilizando NodeJS, VueJS, MongoDB e Arduino, para realizar o feito de controlar um relé eletrônico para abrir a porta do PET SISTEMAS via celular. ",
     "image": "/pet.webp",
     "link": "https://github.com/hpbonfim/pet-porta-app",
     "idTag": "clicked_project_petporta"
   },
   {
     "id": 2,
-    "title": "Roça Eats ",
+    "title": "Roça Eats",
     "text": "Projeto vencedor no Hackatrouble SP 2020, construído com NodeJS, Angular e infraestrutura AWS para gerenciar um sistema de doação de alimentos hortaliços oriundos da produção excessiva dos produtores rurais, visando a distribuição para instituições de caridade.",
     "image": "/roca.webp",
     "link": "https://github.com/hpbonfim/roca-eats",
@@ -45,7 +45,7 @@ export const LIST_PROJECTS = [
   {
     "id": 4,
     "title": "Canivete Perneta",
-    "text": "Projeto criado no HackathonCCR, utilizando React-Native e AWS, visa auxiliar o caminhoneiro em suas tarefas diárias.",
+    "text": "Projeto criado no HackathonCCR, utilizando React-Native e infraestrutura AWS, visa auxiliar o caminhoneiro em suas tarefas diárias.",
     "image": "/canivete.webp",
     "link": "https://github.com/hpbonfim/HackathonCCR",
     "idTag": "clicked_project_ccr"
