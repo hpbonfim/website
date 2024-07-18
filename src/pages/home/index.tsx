@@ -6,16 +6,32 @@ import { I18nProvider } from "@lingui/react"
 import { i18n } from "@lingui/core"
 import './styles.css'
 import { useEffect } from 'react'
-import { dynamicLoadMessages } from '../../i18n'
+import { dynamicLoadMessages, LOCALES } from '../../i18n'
+
+const SelectComponent = () => {
+  function changeLanguage(event: React.ChangeEvent<HTMLSelectElement>) {
+    dynamicLoadMessages(event.target.value as keyof typeof LOCALES)
+  }
+
+  return (
+    <div style={{ display: "flex", flexDirection: 'row', justifyContent: 'end', margin: '10px' }}>
+      <select onChange={changeLanguage} >
+        {Object.entries(LOCALES).map(([key, value]) => (<option key={key} value={key}>{value}</option>))}
+      </select>
+    </div>
+  )
+}
 
 const Home = () => {
 
   useEffect(() => {
-    dynamicLoadMessages('pt')
+    dynamicLoadMessages('en')
   }, [])
 
   return (
     <I18nProvider i18n={i18n}>
+      <SelectComponent />
+
       <div id="page-home">
         <div className="content">
           <main>

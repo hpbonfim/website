@@ -2,7 +2,7 @@ import { i18n } from "@lingui/core"
 
 export enum LOCALES {
   en = "English",
-  pt = "Português do Brasil",
+  pt = "Português",
   es = "Español"
 };
 

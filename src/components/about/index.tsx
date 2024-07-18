@@ -41,7 +41,7 @@ export const About = () => {
 
           <p>
             <Trans>
-              Quando criança, minha <strong className="highlight">curiosidade</strong> sobre as coisas me fazia fazer diversas artimanhas, uma delas era quebrar meus carrinhos para <strong className="highlight">descobrir como funcionava</strong> e montava tudo novamente para minha mãe não descobrir <abbr>(😂😅)</abbr> e essa curiosidade, eventualmente, <strong className="highlight">se faz presente nas linhas de código</strong> que escrevo diariamente.
+              Nas <strong className="highlight">se faz presente nas linhas de código</strong> que escrevo, refletem a qualidade do meu trabalho e a paixão que tenho por ele. <strong className="highlight">Códigos limpos, eficientes e seguros</strong> são a minha marca registrada, e eu os utilizo para criar soluções inovadoras e eficazes para os problemas que encontro.
             </Trans>
           </p>
 
@@ -53,29 +53,29 @@ export const About = () => {
           </p>
 
           <p>
-            &gt;
+            &gt;&nbsp;
             <Trans>
               Desenvolver <strong className="highlight">códigos simples para problemas complexos</strong>, ou vice-versa, depende do problema xD <small>(a simplicidade sempre será melhor alternativa)</small>;
             </Trans>
             <br /><br />
-            &gt;
+            &gt;&nbsp;
             <Trans>
               Produzir e/ou utilizar softwares de <strong className="highlight">alta produtividade, segurança, desempenho, sustentabilidade, escalabilidade e afins</strong>;
             </Trans>
             <br /><br />
-            &gt;
+            &gt;&nbsp;
             <Trans>
               Prover as melhores <strong className="highlight">infraestruturas como código</strong>; <small>(cloud / hybrid / on-premise)</small>;
             </Trans>
             <br /><br />
-            &gt;
+            &gt;&nbsp;
             <Trans>
               Correr sempre atrás das <strong className="highlight">melhores soluções</strong> para resolver os problemas; <small>(não importa o quão difícil seja)</small>
             </Trans>
             <br /><br />
-            &gt;
+            &gt;&nbsp;
             <Trans>
-              Aniquilar bugs em troca de recompensas. <small>(buguei o GitHub commitando mais de 40k linhas de código tempos atrás...)</small>.
+              Aniquilar bugs em troca de recompensas.
             </Trans>
           </p>
 

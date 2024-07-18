@@ -17,16 +17,12 @@ export const Terminal = () => {
       </div>
 
       <div>
-        <p className="clock">
-          &gt;&nbsp;{time}
-        </p>
-      </div>
-
-      <div>
         <p className="message">
+          &gt;&nbsp;
           <Trans>
-            &gt;Bem vindo ao meu universo!&nbsp;
+            Bem vindo ao meu universo!
           </Trans>
+          &nbsp;
           <picture>
             <span className="white-cloud">&#9729;</span>
             <img src='logo.webp' width={40} height={40} alt="logo" />
@@ -34,6 +30,11 @@ export const Terminal = () => {
         </p>
       </div>
 
+      <div>
+        <p className="clock">
+          &gt;&nbsp;{time}
+        </p>
+      </div>
     </div>
   )
 }
