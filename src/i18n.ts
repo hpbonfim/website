@@ -4,7 +4,7 @@ export enum LOCALES {
   en = "English",
   pt = "Português",
   es = "Español"
-};
+}
 
 export async function dynamicLoadMessages(locale: keyof typeof LOCALES) {
   const catalog = await import(`./locales/${locale}.po`)
