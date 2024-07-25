@@ -18,9 +18,21 @@ msgstr ""
 msgid "\"A <0>imaginação</0> é mais importante que o conhecimento\""
 msgstr "\"A <0>imaginação</0> é mais importante que o conhecimento\""
 
+#: src/components/projects/index.tsx:84
+msgid "<0>Confira outros projetos...</0>"
+msgstr "<0>Confira outros projetos...</0>"
+
 #: src/components/about/index.tsx:22
 msgid "<0>ENTRE AQUI...</0>"
 msgstr "<0>ENTRE AQUI...</0>"
+
+#: src/components/projects/index.tsx:79
+msgid "<0>Repositório...</0>"
+msgstr "<0>Repositório...</0>"
+
+#: src/components/projects/index.tsx:85
+msgid "<0>Tenho diversos projetos open-source para qualquer pessoa contribuir ou ser contribuído com minhas soluções, desde API's até aplicativos completos. be my guest!</0>"
+msgstr "<0>Tenho diversos projetos open-source para qualquer pessoa contribuir ou ser contribuído com minhas soluções, desde API's até aplicativos completos. be my guest!</0>"
 
 #: src/components/about/index.tsx:95
 msgid "<0>Vamos explorar a tecnologia, <1>juntos</1>!</0>"
@@ -57,6 +69,26 @@ msgstr "No coração do meu trabalho, você encontrará <0>DevOps</0>, <1>Design
 #: src/components/about/index.tsx:62
 msgid "Produzir e/ou utilizar softwares de <0>alta produtividade, segurança, desempenho, sustentabilidade, escalabilidade e afins</0>;"
 msgstr "Produzir e/ou utilizar softwares de <0>alta produtividade, segurança, desempenho, sustentabilidade, escalabilidade e afins</0>;"
+
+#: src/constant.ts:50
+msgid "Projeto criado no HackathonCCR, utilizando React-Native e infraestrutura AWS, visa auxiliar o caminhoneiro em suas tarefas diárias."
+msgstr "Projeto criado no HackathonCCR, utilizando React-Native e infraestrutura AWS, visa auxiliar o caminhoneiro em suas tarefas diárias."
+
+#: src/constant.ts:26
+msgid "Projeto feito com arquitetura orientada a micro serviços e Docker Swarm, utilizando NodeJS, VueJS, MongoDB e Arduino, para realizar o feito de controlar um relé eletrônico para abrir a porta do PET SISTEMAS via celular."
+msgstr "Projeto feito com arquitetura orientada a micro serviços e Docker Swarm, utilizando NodeJS, VueJS, MongoDB e Arduino, para realizar o feito de controlar um relé eletrônico para abrir a porta do PET SISTEMAS via celular."
+
+#: src/constant.ts:18
+msgid "Projeto feito com arquitetura orientada a micro serviços e Docker Swarm, utilizando NodeJS, VueJS, MongoDB, Arduino e outros, para realizar o feito de controlar um relé eletrônico, utilizado para ativar/desativar a luz e uma porta eletrônica e alguns sensores para transmitir em tempo real a leitura de dados."
+msgstr "Projeto feito com arquitetura orientada a micro serviços e Docker Swarm, utilizando NodeJS, VueJS, MongoDB, Arduino e outros, para realizar o feito de controlar um relé eletrônico, utilizado para ativar/desativar a luz e uma porta eletrônica e alguns sensores para transmitir em tempo real a leitura de dados."
+
+#: src/constant.ts:42
+msgid "Projeto Top 50 do Megahack v2 2020, plataforma construída com NodeJS, Angular e infraestrutura do Google Cloud, visa construir um sistema blockchain para criação de contratos jurídicos com 100% de integridade legal e transparência."
+msgstr "Projeto Top 50 do Megahack v2 2020, plataforma construída com NodeJS, Angular e infraestrutura do Google Cloud, visa construir um sistema blockchain para criação de contratos jurídicos com 100% de integridade legal e transparência."
+
+#: src/constant.ts:34
+msgid "Projeto vencedor no Hackatrouble SP 2020, construído com NodeJS, Angular e infraestrutura AWS para gerenciar um sistema de doação de alimentos hortaliços oriundos da produção excessiva dos produtores rurais, visando a distribuição para instituições de caridade."
+msgstr "Projeto vencedor no Hackatrouble SP 2020, construído com NodeJS, Angular e infraestrutura AWS para gerenciar um sistema de doação de alimentos hortaliços oriundos da produção excessiva dos produtores rurais, visando a distribuição para instituições de caridade."
 
 #: src/components/about/index.tsx:67
 msgid "Prover as melhores <0>infraestruturas como código</0>; <1>(cloud / hybrid / on-premise)</1>;"

@@ -17,9 +17,21 @@ msgstr ""
 msgid "\"A <0>imaginação</0> é mais importante que o conhecimento\""
 msgstr "\"<0>La imaginación</0> es más importante que el conocimiento\""
 
+#: src/components/projects/index.tsx:84
+msgid "<0>Confira outros projetos...</0>"
+msgstr "<0>Consulta otros proyectos...</0>"
+
 #: src/components/about/index.tsx:22
 msgid "<0>ENTRE AQUI...</0>"
-msgstr "<0>ENTRA AQUÍ...</0>"
+msgstr "<0>BE MY GUEST!</0>"
+
+#: src/components/projects/index.tsx:79
+msgid "<0>Repositório...</0>"
+msgstr "<0>Repositorio...</0>"
+
+#: src/components/projects/index.tsx:85
+msgid "<0>Tenho diversos projetos open-source para qualquer pessoa contribuir ou ser contribuído com minhas soluções, desde API's até aplicativos completos. be my guest!</0>"
+msgstr "<0>Tengo varios proyectos de código abierto para que cualquier persona contribuya o se beneficie de mis soluciones, desde APIs hasta aplicaciones completas. ¡Sé bienvenido!</0>"
 
 #: src/components/about/index.tsx:95
 msgid "<0>Vamos explorar a tecnologia, <1>juntos</1>!</0>"
@@ -56,6 +68,26 @@ msgstr "En el corazón de mi trabajo, encontrarás <0>DevOps</0>, <1>Design Patt
 #: src/components/about/index.tsx:62
 msgid "Produzir e/ou utilizar softwares de <0>alta produtividade, segurança, desempenho, sustentabilidade, escalabilidade e afins</0>;"
 msgstr "Producir y/o utilizar software de <0>alta productividad, seguridad, rendimiento, sostenibilidad, escalabilidad y similares</0>;"
+
+#: src/constant.ts:50
+msgid "Projeto criado no HackathonCCR, utilizando React-Native e infraestrutura AWS, visa auxiliar o caminhoneiro em suas tarefas diárias."
+msgstr "Proyecto creado en el HackathonCCR, utilizando React-Native e infraestructura AWS, tiene como objetivo ayudar a los camioneros en sus tareas diarias."
+
+#: src/constant.ts:26
+msgid "Projeto feito com arquitetura orientada a micro serviços e Docker Swarm, utilizando NodeJS, VueJS, MongoDB e Arduino, para realizar o feito de controlar um relé eletrônico para abrir a porta do PET SISTEMAS via celular."
+msgstr "Proyecto realizado con arquitectura orientada a microservicios y Docker Swarm, utilizando NodeJS, VueJS, MongoDB y Arduino, para lograr la hazaña de controlar un relé electrónico para abrir la puerta de PET SISTEMAS a través del celular."
+
+#: src/constant.ts:18
+msgid "Projeto feito com arquitetura orientada a micro serviços e Docker Swarm, utilizando NodeJS, VueJS, MongoDB, Arduino e outros, para realizar o feito de controlar um relé eletrônico, utilizado para ativar/desativar a luz e uma porta eletrônica e alguns sensores para transmitir em tempo real a leitura de dados."
+msgstr "Proyecto realizado con arquitectura orientada a microservicios y Docker Swarm, utilizando NodeJS, VueJS, MongoDB, Arduino y otros, para lograr la hazaña de controlar un relé electrónico, utilizado para activar/desactivar la luz y una puerta electrónica, y algunos sensores para transmitir en tiempo real la lectura de datos."
+
+#: src/constant.ts:42
+msgid "Projeto Top 50 do Megahack v2 2020, plataforma construída com NodeJS, Angular e infraestrutura do Google Cloud, visa construir um sistema blockchain para criação de contratos jurídicos com 100% de integridade legal e transparência."
+msgstr "Proyecto Top 50 de Megahack v2 2020, plataforma construida con NodeJS, Angular e infraestructura de Google Cloud, tiene como objetivo construir un sistema blockchain para la creación de contratos legales con 100% de integridad legal y transparencia."
+
+#: src/constant.ts:34
+msgid "Projeto vencedor no Hackatrouble SP 2020, construído com NodeJS, Angular e infraestrutura AWS para gerenciar um sistema de doação de alimentos hortaliços oriundos da produção excessiva dos produtores rurais, visando a distribuição para instituições de caridade."
+msgstr "Proyecto ganador en Hackatrouble SP 2020, construido con NodeJS, Angular e infraestructura AWS para gestionar un sistema de donación de alimentos vegetales provenientes de la producción excesiva de los productores rurales, con el objetivo de distribuirlos a instituciones benéficas."
 
 #: src/components/about/index.tsx:67
 msgid "Prover as melhores <0>infraestruturas como código</0>; <1>(cloud / hybrid / on-premise)</1>;"
