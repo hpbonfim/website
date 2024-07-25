@@ -1,46 +1,35 @@
 name: Deploy Staging to Firebase Preview Hosting on PR
-"on":
+'on':
   pull_request:
     branches:
       - staging
 jobs:
   build_and_preview:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20]
-        pnpm-version: [9]
-
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          version: ${{ matrix.pnpm-version }}
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "pnpm"
+          node-version: lts/*
 
       - name: Install Dependencies
-        run: pnpm install
+        run: npm ci
 
       - name: Build
-        run: pnpm build
+        run: npm run build
 
       - name: Lint
-        run: pnpm lint
-
+        run: npm run lint
+      
       - name: Test
-        run: pnpm test
+        run: npm run test
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_HENRIQUE_BONFIM }}"
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HENRIQUE_BONFIM }}'
           projectId: henrique-bonfim
           expires: 1d
         env:
