@@ -32,19 +32,19 @@
 
 .terminal .bash {
   color: rgb(6, 142, 206);
-  -webkit-animation: type .5s 1s steps(20, end) forwards;
-  -moz-animation: type .5s 1s steps(20, end) forwards;
-  -o-animation: type .5s 1s steps(20, end) forwards;
-  animation: type .5s 1s steps(20, end) forwards;
+  -webkit-animation: type .1s .1s steps(20, end) forwards;
+  -moz-animation: type .1s .1s steps(20, end) forwards;
+  -o-animation: type .1s .1s steps(20, end) forwards;
+  animation: type .1s .1s steps(20, end) forwards;
 }
 
 .terminal .message {
   color: #fff;
   margin-top: -1em;
-  -webkit-animation: type .5s 3s steps(20, end) forwards;
-  -moz-animation: type .5s 3s steps(20, end) forwards;
-  -o-animation: type .5s 3s steps(20, end) forwards;
-  animation: type .5s 3s steps(20, end) forwards;
+  -webkit-animation: type 1s 1s steps(20, end) forwards;
+  -moz-animation: type 1s 1s steps(20, end) forwards;
+  -o-animation: type 1s 1s steps(20, end) forwards;
+  animation: type 1s 1s steps(20, end) forwards;
 }
 
 .terminal .message .white-cloud {
@@ -57,11 +57,10 @@
 
 .terminal .clock {
   color: #fff;
-  font-size: 0.8em;
-  -webkit-animation: type .5s 2s steps(20, end) forwards;
-  -moz-animation: type .5s 2s steps(20, end) forwards;
-  -o-animation: type .5s 2s steps(20, end) forwards;
-  animation: type .5s 2s steps(20, end) forwards;
+  -webkit-animation: type 1s 2s steps(20, end) forwards;
+  -moz-animation: type 1s 2s steps(20, end) forwards;
+  -o-animation: type 1s 2s steps(20, end) forwards;
+  animation: type 1s 2s steps(20, end) forwards;
 }
 
 @-webkit-keyframes blink {
