@@ -11,7 +11,7 @@ export const SOCIAL_LINKS = [
   { url: "https://instagram.com/hpbonfim", className: "instagram", id: "clicked_instagram", icon: "/instagram.webp" }
 ];
 
-export const LIST_PROJECTS: any = [
+export const LIST_PROJECTS = [
   {
     "id": 0,
     "title": "ArduEVE",

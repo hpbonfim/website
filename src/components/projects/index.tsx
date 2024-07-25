@@ -1,19 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import './styles.css'
 import { GITHUB_URL, PROJECTS_IMAGE_URL, LIST_PROJECTS } from '../../constant';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/macro';
+import { MessageDescriptor } from '@lingui/core';
 
-interface ProjectData {
+interface ProjectData<T> {
   id: number;
   title: string;
-  text: string;
+  text: T;
   image: string;
   link: string;
   idTag: string;
 }
 
-const ProjectCard = ({ project }: { project: ProjectData }) => (
+const ProjectCard = ({ project }: { project: ProjectData<string> }) => (
   <div key={project.id} className="card-list">
     <button className="card-header"
       onClick={() => window.open(project.link, '_blank')}>
@@ -41,13 +42,10 @@ const ProjectCard = ({ project }: { project: ProjectData }) => (
 );
 
 export const Projects = () => {
-  const [projects, setProjects] = useState<ProjectData[]>([]);
   const [showProjects, setShowProjects] = useState(true);
   const i18n = useLingui()
 
-  useEffect(() => {
-    setProjects(LIST_PROJECTS.reduce((prev: ProjectData[], curr: ProjectData) => [...prev, { ...curr, text: i18n._(curr.text) }], []));
-  }, [i18n]);
+  const projects = useMemo(() => LIST_PROJECTS.reduce((prev: ProjectData<string>[], curr: ProjectData<MessageDescriptor>) => [...prev, { ...curr, text: i18n._(curr.text) }], []), [i18n])
 
   const toggleShowProjects = () => setShowProjects(!showProjects);
 
