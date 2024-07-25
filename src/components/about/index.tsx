@@ -1,79 +1,119 @@
-import { useEffect, useState } from "react";
 import { SocialLinkProps } from "./types";
 import "./styles.css";
-import { PROFILE_IMAGE_URI, SOCIAL_LINKS } from "../../constant";
+import { PROFILE_IMAGE_URI, SOCIAL_LINKS } from "../../constant"
+import { I18nProvider } from "@lingui/react"
+import { i18n } from "@lingui/core"
+import { Trans } from "@lingui/macro"
 
 const SocialLink = ({ url, className, id, icon }: SocialLinkProps) => (
   <a href={url} rel="noopener noreferrer" target="_blank" className={className} id={id}>
-    <img src={icon} alt={className} width={'30rem'} height={'30rem'} />
+    <img src={icon} alt={className} width={30} height={30} />
   </a>
 );
 
-const small = (text: string) => (<small><i>{text}</i></small>)
+const linkedin = SOCIAL_LINKS.filter(x => x.className === 'linkedin')[0].url
 
 export const About = () => {
-  const [age, setAge] = useState<number>(0)
-  useEffect(() => setAge(new Date(new Date().setTime(Date.parse(Date()) - Date.parse("05/21/1996"))).getFullYear() - 1970), [])
 
   return (
-    <div className="container">
-      <main className="story">
-        <h4>BE MY GUEST...</h4>
+    <I18nProvider i18n={i18n}>
+      <div className="container">
+        <main className="story">
+          <Trans>
+            <h4>ENTRE AQUI...</h4>
+          </Trans>
 
-        <a id="clicked_photo" href={PROFILE_IMAGE_URI} target="_blank">
-          <img className="perfil" src={PROFILE_IMAGE_URI} alt="Minha Foto" width={100} height={100} />
-        </a>
+          <a id="clicked_photo" href={PROFILE_IMAGE_URI} target="_blank">
+            <img className="perfil" src={PROFILE_IMAGE_URI} alt="Minha Foto" width={100} height={100} />
+          </a>
 
-        <p>
-          Bem-vind@s ao meu universo, um lugar onde as infinitas linhas de código são responsáveis por nos permitir navegar dentre mundos, misteriosos. E como desenvolvedor de software há mais de 10 anos, é meu dever guiá-los nessa jornada, desafiando o vasto mundo digital, descobrindo novas possibilidades, construindo novas pontes e por fim, a solução ideal.
-        </p>
+          <p>
+            <Trans>
+              Bem-vind@s ao <strong className="highlight">meu universo</strong>, um lugar onde as <strong className="highlight">infinitas linhas de código</strong> são responsáveis por nos permitir <strong className="highlight">navegar dentre mundos misteriosos...</strong> E como engenheiro de software há alguns anos, é meu dever guiá-los nessa jornada, desafiando o vasto mundo digital, <strong className="highlight">descobrindo novas possibilidades</strong>, construindo novas pontes e por fim, <strong className="highlight"><a href={linkedin}>a solução ideal</a></strong>.
+            </Trans>
+          </p>
 
-        <p>
-          Quando criança, minha curiosidade sobre as coisas me fazia fazer diversas artimanhas, uma delas era quebrar meus carrinhos para descobrir como funcionava e montava tudo novamente para minha mãe não descobrir {small('(rsrsrs)')} e essa curiosidade, eventualmente, se faz presente nas linhas de código que escrevo diariamente.
-        </p>
+          <p>
+            <Trans>
+              Sou Henrique, sou um <strong className="highlight">explorador incansável</strong> do mundo da tecnologia.
+            </Trans>
+          </p>
 
-        <p>
-          Sou Henrique, tenho {age} anos e sou um explorador incansável do mundo da tecnologia.
-        </p>
+          <p>
+            <Trans>
+              Nas <strong className="highlight">se faz presente nas linhas de código</strong> que escrevo, refletem a qualidade do meu trabalho e a paixão que tenho por ele. <strong className="highlight">Códigos limpos, eficientes e seguros</strong> são a minha marca registrada, e eu os utilizo para criar soluções inovadoras e eficazes para os problemas que encontro.
+            </Trans>
+          </p>
 
-        <p>
-          Trabalho sob os cargos de <strong>Engenheiro de Software / Arquiteto Cloud / Engenheiro DevOps / Engenheiro SRE</strong>, e sou conhecido por:
-        </p>
 
-        <ul style={{ listStyleType: 'none' }}>
-          <li>- Desenvolver códigos simples para problemas complexos {small('(a simplicidade é a melhor resposta)')};</li>
-          <li>- Produzir e utilizar softwares de alta produtividade, segurança, desempenho e escalabilidade;</li>
-          <li>- Prover as melhores infraestruturas como código em qualquer <i>public/private cloud</i>;</li>
-          <li>- Correr sempre atrás das melhores soluções para resolver os problemas; <br /></li>
-          <li>- Buscar bugs em troca de recompensas {small('(buguei o GitHub commitando mais de 40k em alguns anos passados... rsrsrs)')}.</li>
-        </ul>
+          <p>
+            <Trans>
+              Trabalho sob os cargos de <strong className="highlight">Engenheiro de Software / Arquiteto Cloud / Engenheiro DevOps / Engenheiro SRE</strong>, e sou conhecido por:
+            </Trans>
+          </p>
 
-        <p>
-          No coração do meu trabalho, você encontrará <strong>DevOps</strong>, <strong>Design Patterns</strong> e <strong>Clean Code</strong>. Estas são a chave para transformar problemas em soluções, para transformar ideias em realidade.
-        </p>
+          <p>
+            &gt;&nbsp;
+            <Trans>
+              Desenvolver <strong className="highlight">códigos simples para problemas complexos</strong>, ou vice-versa, depende do problema xD <small>(a simplicidade sempre será melhor alternativa)</small>;
+            </Trans>
+            <br /><br />
+            &gt;&nbsp;
+            <Trans>
+              Produzir e/ou utilizar softwares de <strong className="highlight">alta produtividade, segurança, desempenho, sustentabilidade, escalabilidade e afins</strong>;
+            </Trans>
+            <br /><br />
+            &gt;&nbsp;
+            <Trans>
+              Prover as melhores <strong className="highlight">infraestruturas como código</strong>; <small>(cloud / hybrid / on-premise)</small>;
+            </Trans>
+            <br /><br />
+            &gt;&nbsp;
+            <Trans>
+              Correr sempre atrás das <strong className="highlight">melhores soluções</strong> para resolver os problemas; <small>(não importa o quão difícil seja)</small>
+            </Trans>
+            <br /><br />
+            &gt;&nbsp;
+            <Trans>
+              Aniquilar bugs em troca de recompensas.
+            </Trans>
+          </p>
 
-        <p>
-          Sou um orgulhoso membro da comunidade <strong>open-source</strong>, um espaço onde a colaboração e a inovação andam de mãos dadas. Aqui, eu contribuo para projetos, aprendo com os melhores e participo de hackatons, sempre buscando expandir meus horizontes e aprimorar minhas habilidades. {small('(inclusive, já ganhei um evento Hackathon, mais isso é história para outro momento...)')}
-        </p>
+          <p>
+            <Trans>
+              No coração do meu trabalho, você encontrará <strong className="highlight">DevOps</strong>, <strong className="highlight">Design Patterns</strong> e <strong className="highlight">Clean Code</strong>. Estas são a chave para quebrar problemas complexos e conquistar a simplicidade.
+            </Trans>
+          </p>
 
-        <p>
-          Acredito que o conhecimento é como uma chama: quanto mais você compartilha, mais ela se espalha. Então, vamos juntos nesta jornada de aprendizado e descoberta, vamos iluminar o mundo, vamos explorar a tecnologia, juntos!
-        </p>
+          <p>
+            <Trans>
+              Sou um orgulhoso membro da comunidade <strong className="highlight">open-source</strong>, um espaço onde a colaboração e a inovação andam de mãos dadas. Aqui, eu contribuo para projetos, aprendo com os melhores e participo de hackatons, sempre buscando expandir meus horizontes e aprimorar minhas habilidades. <small>(inclusive, já ganhei um evento Hackathon, mais isso é história para outro momento...)</small>
+            </Trans>
+          </p>
 
-        <blockquote className="quote">
-          "Poucos são aqueles que veem com seus próprios olhos e sentem com seus próprios corações"
-          <footer>Albert Einstein</footer>
-        </blockquote>
+          <p>
+            <Trans>
+              <strong className="highlight">Vamos explorar a tecnologia, <a href={linkedin}>juntos</a>!</strong>
+            </Trans>
+          </p>
 
-        <br></br>
+          <blockquote className="quote">
+            <Trans>
+              "A <b>imaginação</b> é mais importante que o conhecimento"
+            </Trans>
+            <footer>Albert Einstein</footer>
+          </blockquote>
 
-        <div className="social">
-          {SOCIAL_LINKS.map((link) => (
-            <SocialLink key={link.className} {...link} />
-          ))}
-        </div>
-      </main>
-    </div>
+          <br></br>
+
+          <div className="social">
+            {SOCIAL_LINKS.map((obj) => (
+              <SocialLink key={obj.className} {...obj} />
+            ))}
+          </div>
+        </main>
+      </div>
+    </I18nProvider>
   )
 
 }

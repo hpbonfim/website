@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import { configDefaults } from 'vitest/dist/config.js'
+import { lingui } from "@lingui/vite-plugin"
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,7 +11,12 @@ export default defineConfig({
     exclude: [...configDefaults.exclude, 'ansible/*', '.github', 'dev-dist', 'jenkins', 'nginx', '.firebase'],
   },
   plugins: [
-    react(),
+    react({
+      babel: {
+        plugins: ["macros"],
+      },
+    }),
+    lingui(),
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
