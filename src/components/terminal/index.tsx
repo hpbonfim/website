@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 import './styles.css'
+import { Trans } from "@lingui/macro"
+import { i18n } from "@lingui/core"
 
 export const Terminal = () => {
-  const [time, setTime] = useState<string>(new Date().toLocaleString('pt-BR'))
+  const [time, setTime] = useState<string>(i18n.date(new Date()))
 
   useEffect(() => {
-    setInterval(() => setTime(new Date().toLocaleString('pt-BR')), 1000)
+    setInterval(() => setTime(i18n.date(new Date())), 1000)
   }, [])
 
   return (
@@ -15,21 +17,24 @@ export const Terminal = () => {
       </div>
 
       <div>
-        <p className="clock">
-          &gt;&nbsp;{time}
-        </p>
-      </div>
-
-      <div>
         <p className="message">
-          &gt; Welcome to my universe!&nbsp;
+          &gt;&nbsp;
+          <Trans>
+            Bem vindo ao meu universo!
+          </Trans>
+          &nbsp;
           <picture>
             <span className="white-cloud">&#9729;</span>
-            <img src='logo.webp' width={40} height={40} />
+            <img src='logo.webp' width={40} height={40} alt="logo" />
           </picture>
         </p>
       </div>
 
+      <div>
+        <p className="clock">
+          &gt;&nbsp;{time}
+        </p>
+      </div>
     </div>
   )
 }
