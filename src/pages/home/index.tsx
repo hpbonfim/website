@@ -15,7 +15,7 @@ const SelectComponent = () => {
 
   return (
     <div style={{ display: "flex", flexDirection: 'row', justifyContent: 'end', margin: '10px', gap: '5px' }}>
-      {Object.entries(LOCALES).map(([key, _]) => (
+      {Object.entries(LOCALES).map(([key]) => (
         <img
           style={{ background: 'none', border: 'none', cursor: 'pointer', width: '40px' }}
           key={key}
